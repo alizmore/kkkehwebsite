@@ -10,17 +10,17 @@
 :root{
   --accent:#00917C;
   --accent2:#055A57;
-  --accent-light:rgba(0,145,124,0.1);
+  --accent-light:rgba(5,90,87,0.10);
   --aqua:#00FFDA;
   --peach:#FFCE7B;
-  --dark:#141414;
-  --dark2:#1A1D1A;
+  --dark:#055A57;
+  --dark2:#071e1a;
   --ink:#141414;
   --ink60:rgba(20,20,20,0.6);
   --ink30:rgba(20,20,20,0.3);
   --bg:#FFFFFF;
-  --bg2:#F0F7F6;
-  --line:rgba(5,90,87,0.12);
+  --bg2:#dbefec;
+  --line:rgba(5,90,87,0.14);
   --serif:'Instrument Serif',Georgia,serif;
   --sans:'DM Sans',sans-serif;
   --r:12px;
@@ -30,30 +30,29 @@ html{scroll-behavior:smooth;}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(20,20,20,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,90,87,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
 .nav-logo-mark{font-family:var(--serif);font-size:1.1rem;color:#fff;letter-spacing:-0.01em;}
 .nav-logo-mark sup{font-family:var(--sans);font-size:0.42rem;font-weight:600;color:var(--aqua);vertical-align:super;margin-left:2px;}
 .nav-center{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-pill);padding:6px 8px;}
 .nav-center a{font-size:0.78rem;font-weight:400;color:rgba(255,255,255,0.55);text-decoration:none;padding:7px 16px;border-radius:var(--r-pill);transition:all 0.2s;}
 .nav-center a:hover,.nav-center a.active{color:#fff;background:rgba(255,255,255,0.1);}
-.nav-cta{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--dark);background:var(--aqua);padding:10px 22px;border-radius:var(--r-pill);text-decoration:none;transition:all 0.2s;}
-.nav-cta:hover{background:#fff;}
+.nav-cta{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:#141414;background:var(--peach);padding:10px 22px;border-radius:var(--r-pill);text-decoration:none;transition:all 0.2s;}
 @media(max-width:768px){.nav-center{display:none;}}
 .nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
 .nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s;}
 .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav-hamburger.open span:nth-child(2){opacity:0;}
 .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(20,20,20,0.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:8px 0 16px;}
+.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(5,90,87,0.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);flex-direction:column;padding:8px 0 16px;}
 .mob-nav.open{display:flex;}
 .mob-nav a{font-size:0.9rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:14px 28px;transition:all 0.15s;}
 .mob-nav a:hover,.mob-nav a.active{color:#fff;background:rgba(255,255,255,0.05);}
-.mob-nav .mob-cta{margin:12px 24px 0;background:var(--aqua);color:var(--dark);border-radius:var(--r-pill);text-align:center;font-weight:500;padding:13px 24px;}
+.mob-nav .mob-cta{margin:12px 24px 0;background:var(--peach);color:#141414;border-radius:var(--r-pill);text-align:center;font-weight:500;padding:13px 24px;}
 @media(max-width:768px){.nav-hamburger{display:flex;}.nav-cta{display:none;}}
 
 /* ── HERO ── */
-.hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--dark);}
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#071e1a;}
 .hero-pattern{position:absolute;inset:0;background-image:linear-gradient(rgba(0,145,124,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,145,124,0.06) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 100%);}
 .hero-glow1{position:absolute;top:-100px;left:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,145,124,0.15) 0%,transparent 65%);pointer-events:none;}
 .hero-glow2{position:absolute;bottom:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,255,218,0.08) 0%,transparent 65%);pointer-events:none;}
@@ -227,7 +226,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .cta-banner a:hover{background:#fff;transform:translateY(-2px);}
 
 /* ── FOOTER ── */
-footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);}
+footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.08);}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
 .footer-logo{font-family:var(--serif);font-size:1rem;color:#fff;text-decoration:none;}
 .footer-logo sup{font-family:var(--sans);font-size:0.42rem;font-weight:600;color:var(--aqua);vertical-align:super;margin-left:2px;}
@@ -248,7 +247,7 @@ footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255
 <!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">
-    <img src="logo.png" alt="Keheilan Asset Management" style="height:34px;width:auto;display:block;">
+    <img src="logo.png" alt="Keheilan Asset Management" style="height:44px;width:auto;display:block;">
   </a>
   <div class="nav-center">
     <a href="keheilan-homepage.html" class="active">Home</a>
@@ -598,7 +597,7 @@ footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <a href="/" class="footer-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:28px;width:auto;display:block;"></a>
+    <a href="/" class="footer-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:38px;width:auto;display:block;"></a>
     <ul class="footer-links">
       <li><a href="keheilan-kaif.html">KAIF</a></li>
       <li><a href="keheilan-sukuk.html">Sukuk</a></li>
@@ -614,7 +613,7 @@ footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255
 const io = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting){x.target.classList.add('on'); io.unobserve(x.target);}}),{threshold:0.08});
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 window.addEventListener('scroll', () => {
-  document.querySelector('nav').style.background = scrollY > 20 ? 'rgba(20,20,20,0.98)' : 'rgba(20,20,20,0.92)';
+  document.querySelector('nav').style.background = scrollY > 20 ? 'rgba(5,90,87,0.98)' : 'rgba(5,90,87,0.95)';
 }, {passive:true});
 const hbg=document.getElementById('hamburger');const mobNav=document.getElementById('mobNav');hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mobNav.classList.toggle('open');});mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mobNav.classList.remove('open');}));
 </script>
