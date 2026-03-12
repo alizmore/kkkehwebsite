@@ -64,12 +64,22 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .whoweare-text h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:24px;}
 .whoweare-text h2 em{font-style:italic;color:var(--accent);}
 .whoweare-text p{font-size:0.9375rem;color:var(--ink60);line-height:1.75;margin-bottom:16px;}
-.presence-stats{display:flex;flex-direction:column;gap:16px;}
-.pres-stat{background:var(--bg);border-radius:var(--r);padding:24px 28px;border:1px solid var(--line);display:flex;align-items:center;gap:20px;}
-.pres-stat-icon{width:40px;height:40px;border-radius:var(--r);background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.pres-stat-text strong{display:block;font-size:0.875rem;color:var(--ink);margin-bottom:2px;}
-.pres-stat-text span{font-size:0.8rem;color:var(--ink60);}
+.office-block{display:flex;flex-direction:column;}
+.office-block-label{font-size:0.65rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+.office-item{padding:24px 0;}
+.office-region{font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;}
+.office-city{font-family:var(--serif);font-size:1.6rem;color:var(--ink);line-height:1;margin-bottom:10px;}
+.office-desc{font-size:0.82rem;color:var(--ink60);line-height:1.65;}
+.office-divider{height:1px;background:var(--line);}
 @media(max-width:768px){.whoweare-inner{grid-template-columns:1fr;gap:40px;}}
+/* LEADERSHIP */
+.leadership{padding:100px 40px;background:var(--bg);}
+.leadership-inner{max-width:860px;margin:0 auto;}
+.leader-card{background:var(--bg2);border-radius:var(--r);padding:48px;border:1px solid var(--line);margin-top:48px;}
+.leader-name{font-family:var(--serif);font-size:2rem;font-weight:400;color:var(--ink);line-height:1;margin-bottom:8px;}
+.leader-title{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:24px;}
+.leader-divider{height:1px;background:var(--line);margin-bottom:24px;}
+.leader-bio{font-size:0.9375rem;color:var(--ink60);line-height:1.8;}
 /* PILLARS */
 .pillars{padding:100px 40px;background:var(--bg);}
 .pillars-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);}
@@ -178,8 +188,8 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="hero-glow2"></div>
   <div class="hero-content">
     <div class="hero-tag">Keheilan Asset Management</div>
-    <h1>Building the Future of <em>Investment Excellence.</em></h1>
-    <p class="hero-sub">A global investment firm bridging traditional excellence with cutting-edge opportunities across Venture Capital, Private Equity, and Global Markets.</p>
+    <h1>Keheilan Asset Management. <em>Built Around Discipline.</em></h1>
+    <p class="hero-sub">A Shariah-compliant investment firm managing capital across two lines of business: institutional-grade asset management and deep technology venture.</p>
     <div class="hero-stat-row">
       <div class="h-stat">
         <div class="h-stat-num">3</div>
@@ -204,11 +214,11 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="mission-inner">
     <div class="rv">
       <div class="tag-pill">Our Mission</div>
-      <h2>Sophisticated, ethical, and <em>innovative</em> financial solutions.</h2>
-      <p style="font-size:0.9375rem;color:var(--ink60);line-height:1.75;margin-top:0;">We are committed to bridging traditional investment excellence with cutting-edge opportunities — all while upholding the highest standards of integrity and responsible investing.</p>
+      <h2>Disciplined investing. <em>Uncompromising ethics.</em></h2>
+      <p style="font-size:0.9375rem;color:var(--ink60);line-height:1.75;margin-top:0;">Every portfolio we construct — from Sukuk to venture — is built on the same foundation: rigorous analysis, Shariah compliance, and long-term thinking.</p>
     </div>
     <div class="mission-quote rv d1">
-      <p>"To transform the investment landscape by delivering sophisticated, ethical, and innovative financial solutions that create lasting value for our clients while contributing to sustainable economic growth."</p>
+      <p>"We believe disciplined investing and ethical principles are not trade-offs. Every portfolio we construct — from Sukuk to venture — is held to the same standard of rigor and integrity."</p>
     </div>
   </div>
 </section>
@@ -221,27 +231,37 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <h2>Experienced professionals. <em>Lasting partnerships.</em></h2>
       <p>We are a team of experienced investment professionals dedicated to building lasting partnerships with our clients. Our approach combines deep market expertise with innovative strategies to deliver exceptional results.</p>
       <p>At Keheilan, we believe in the power of responsible investing. Every decision we make is guided by our commitment to creating value not just for our clients, but for the communities and industries we serve.</p>
-      <p>With a global presence spanning the United States, Europe, and the Middle East, we bring diverse perspectives and opportunities to every investment strategy.</p>
+      <p>With offices in Europe and an active presence across the Middle East, we bring regional expertise to every investment decision.</p>
     </div>
-    <div class="presence-stats rv d1">
-      <div class="pres-stat">
-        <div class="pres-stat-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="var(--accent)" stroke-width="2"/><path d="M9 2C9 2 6 6 6 9s3 7 3 7M9 2c0 0 3 4 3 7s-3 7-3 7M2 9h14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="pres-stat-text"><strong>United States</strong><span>North American operations and venture access</span></div>
+    <div class="office-block rv d1">
+      <p class="office-block-label">Where We Operate</p>
+      <div class="office-item">
+        <div class="office-region">Europe</div>
+        <div class="office-city">Netherlands</div>
+        <div class="office-desc">Konnetlaantje 4, Rijsenhout · Registered office and principal operations.</div>
       </div>
-      <div class="pres-stat">
-        <div class="pres-stat-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="var(--accent)" stroke-width="2"/><path d="M9 2C9 2 6 6 6 9s3 7 3 7M9 2c0 0 3 4 3 7s-3 7-3 7M2 9h14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="pres-stat-text"><strong>Europe</strong><span>Headquartered in the Netherlands</span></div>
+      <div class="office-divider"></div>
+      <div class="office-item">
+        <div class="office-region">Middle East</div>
+        <div class="office-city">MENA Region</div>
+        <div class="office-desc">Saudi Arabia, UAE, and Egypt — venture activity and investor coverage.</div>
       </div>
-      <div class="pres-stat">
-        <div class="pres-stat-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="var(--accent)" stroke-width="2"/><path d="M9 2C9 2 6 6 6 9s3 7 3 7M9 2c0 0 3 4 3 7s-3 7-3 7M2 9h14" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="pres-stat-text"><strong>Middle East</strong><span>Saudi Arabia, UAE, and Egypt coverage</span></div>
-      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section class="leadership">
+  <div class="leadership-inner">
+    <div class="rv">
+      <div class="tag-pill">Leadership</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.2;margin-top:12px;">The People Behind the Capital.</h2>
+    </div>
+    <div class="leader-card rv d1">
+      <div class="leader-name">Dr. Ahmed Abdelhamid</div>
+      <div class="leader-title">CEO &amp; Founder, Keheilan Asset Management</div>
+      <div class="leader-divider"></div>
+      <p class="leader-bio">Ahmed Abdelhamid, Ph.D. leads Keheilan as its founder and CEO. He has delivered keynote addresses on behalf of early investors in Nawah Scientific and moderated high-level DeepTech investment panels at events including the Deep Tech MEA Summit. His approach to investing is grounded in institutional rigor and long-term value creation.</p>
     </div>
   </div>
 </section>
@@ -250,8 +270,8 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
 <section class="pillars">
   <div class="section-hd rv">
     <div class="tag-pill">Investment Pillars</div>
-    <h2>Four disciplines. One disciplined approach.</h2>
-    <p>We combine four complementary investment strategies to build resilient, diversified portfolios aligned with your long-term objectives.</p>
+    <h2>Two lines of business. One standard of discipline.</h2>
+    <p>Venture capital and institutional asset management — each with its own strategy, structure, and approach, all held to the same standard of rigor.</p>
   </div>
   <div class="pillars-grid">
     <div class="pillar-card p-vc rv">
@@ -263,10 +283,10 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
     </div>
     <div class="pillar-card p-pe rv d1">
       <div class="pillar-bar"></div>
-      <div class="pillar-num">02 / Private Equity</div>
-      <div class="pillar-name">Established Value Creation</div>
+      <div class="pillar-num">02 / Asset Management</div>
+      <div class="pillar-name">Shariah-Compliant Strategies</div>
       <div class="pillar-divider"></div>
-      <p class="pillar-body">Long-term partnerships with established businesses, focused on operational improvement, sustainable growth, and value creation.</p>
+      <p class="pillar-body">Three institutional-grade investment strategies — KAIF, Sukuk Portfolios, and Direct Indexing — built for Shariah-compliant investors seeking systematic, rule-based returns.</p>
     </div>
     <div class="pillar-card p-gm rv d2">
       <div class="pillar-bar"></div>
