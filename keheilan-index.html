@@ -25,6 +25,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .nav-center a.active,.nav-center a:hover{color:#fff;background:rgba(255,255,255,0.1);}
 .nav-cta{font-size:0.78rem;font-weight:500;color:var(--dark);background:var(--aqua);padding:10px 22px;border-radius:var(--r-pill);text-decoration:none;}
 @media(max-width:768px){.nav-center{display:none;}}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}.nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s;}.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}.nav-hamburger.open span:nth-child(2){opacity:0;}.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(20,20,20,0.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);flex-direction:column;padding:8px 0 16px;}.mob-nav.open{display:flex;}.mob-nav a{font-size:0.9rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:14px 28px;transition:all 0.15s;}.mob-nav a:hover,.mob-nav a.active{color:#fff;background:rgba(255,255,255,0.05);}.mob-nav .mob-cta{margin:12px 24px 0;background:var(--aqua);color:var(--dark);border-radius:var(--r-pill);text-align:center;font-weight:500;padding:13px 24px;}@media(max-width:768px){.nav-hamburger{display:flex;}.nav-cta{display:none;}}
 /* HERO */
 .hero{min-height:100svh;background:var(--dark);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;}
 .hero-pattern{position:absolute;inset:0;background-image:linear-gradient(rgba(0,145,124,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,145,124,0.06) 1px,transparent 1px);background-size:60px 60px;}
@@ -143,7 +144,15 @@ footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255
     <a href="keheilan-index.html" class="active">Index Portfolios</a>
   </div>
   <a href="#contact" class="nav-cta">Schedule a Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <a href="keheilan-kaif.html">KAIF</a>
+  <a href="keheilan-sukuk.html">Sukuk</a>
+  <a href="keheilan-index.html" class="active">Index Portfolios</a>
+  <a href="#contact" class="mob-cta">Schedule a Call</a>
+</div>
 
 <div class="hero">
   <div class="hero-pattern"></div>
@@ -370,6 +379,7 @@ footer{padding:40px;background:var(--dark);border-top:1px solid rgba(255,255,255
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}}),{threshold:0.08});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=scrollY>20?'rgba(20,20,20,0.98)':'rgba(20,20,20,0.92)';},{passive:true});
+const hbg=document.getElementById('hamburger');const mobNav=document.getElementById('mobNav');hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mobNav.classList.toggle('open');});mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mobNav.classList.remove('open');}));
 </script>
 </body>
 </html>
