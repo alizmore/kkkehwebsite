@@ -167,6 +167,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 @media(max-width:768px){.process-inner{grid-template-columns:1fr;gap:48px;}}
 
 
+/* ── VC FEATURE ── */
+.vc-feature{padding:100px 40px;background:#071e1a;position:relative;overflow:hidden;}
+.vc-feature::before{content:'';position:absolute;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,255,218,0.07) 0%,transparent 65%);pointer-events:none;}
+.vc-feature-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.vc-feature-label{display:inline-flex;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--aqua);background:rgba(0,255,218,0.08);border:1px solid rgba(0,255,218,0.2);padding:6px 14px;border-radius:var(--r-pill);margin-bottom:20px;}
+.vc-feature h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:400;color:#fff;line-height:1.15;margin-bottom:16px;}
+.vc-feature p{font-size:0.9375rem;color:rgba(255,255,255,0.5);line-height:1.75;margin-bottom:28px;}
+.vc-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px;}
+.vc-pill{font-size:0.75rem;font-weight:500;color:rgba(255,255,255,0.45);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);padding:6px 14px;border-radius:var(--r-pill);}
+.vc-link{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:var(--aqua);text-decoration:none;transition:gap 0.2s;}
+.vc-link:hover{gap:14px;}
+.vc-portfolio-stack{display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,0.06);border-radius:var(--r);}
+.vc-portfolio-item{padding:24px 32px;display:flex;align-items:center;justify-content:space-between;}
+.vc-portfolio-name{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:#fff;}
+.vc-portfolio-tag{font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.2);}
+@media(max-width:768px){.vc-feature-inner{grid-template-columns:1fr;gap:48px;}}
+
 /* ── FEES ── */
 .fees{padding:100px 40px;background:var(--bg);}
 .fees-grid{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
@@ -247,6 +264,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <a href="keheilan-sukuk.html">Sukuk</a>
       </div>
     </div>
+    <a href="keheilan-vc.html">Venture Capital</a>
     <a href="keheilan-about.html">About Keheilan</a>
   </div>
   <a href="keheilan-about.html" class="nav-cta">Schedule a Call</a>
@@ -262,6 +280,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <a href="keheilan-sukuk.html">Sukuk</a>
     </div>
   </div>
+  <a href="keheilan-vc.html">Venture Capital</a>
   <a href="keheilan-about.html">About Keheilan</a>
   <a href="keheilan-about.html" class="mob-cta">Schedule a Call</a>
 </div>
@@ -272,9 +291,9 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="hero-glow1"></div>
   <div class="hero-glow2"></div>
   <div class="hero-content">
-    <div class="hero-tag">Shariah-Compliant Asset Management</div>
-    <h1>Your Capital, <em>Managed with Discipline.</em></h1>
-    <p class="hero-sub">Three distinct investment strategies: AI-managed equity, Sukuk income, and direct indexing, each built on the same principle: precision over speculation.</p>
+    <div class="hero-tag">Shariah-Compliant Asset Management · Deep Tech Venture</div>
+    <h1>Precision Capital. <em>Across Every Horizon.</em></h1>
+    <p class="hero-sub">From Shariah-compliant asset management to deep technology venture, Keheilan manages capital with the same discipline: rigorous selection, active governance, and long-term thinking.</p>
     <a href="#products" class="hero-btn">
       Explore Our Strategies
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -318,8 +337,8 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
 <!-- PRODUCTS -->
 <section class="products" id="products">
   <div class="section-hd rv">
-    <div class="tag-pill">Our Strategies</div>
-    <h2>Three Ways to Invest with Keheilan</h2>
+    <div class="tag-pill">Asset Management</div>
+    <h2>Three Shariah-Compliant Investment Strategies</h2>
     <p>Each strategy is built around a distinct investment thesis, risk profile, and objective. All are Shariah-compliant, professionally managed.</p>
   </div>
   <div class="products-grid">
@@ -358,6 +377,41 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <span class="prod-pill">From $100K</span>
       </div>
       <a href="#" class="prod-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- VENTURE CAPITAL FEATURE -->
+<section class="vc-feature">
+  <div class="vc-feature-inner">
+    <div class="rv">
+      <div class="vc-feature-label">Venture Capital</div>
+      <h2>Deep Tech Fund</h2>
+      <p>We invest in a concentrated set of deep technology companies solving structural problems in MENA and beyond. Pre-seed through Series A, with active partnership throughout.</p>
+      <div class="vc-pills">
+        <span class="vc-pill">Pre-Seed to Series A</span>
+        <span class="vc-pill">MENA Focus</span>
+        <span class="vc-pill">Active Ownership</span>
+      </div>
+      <a href="keheilan-vc.html" class="vc-link">View the Fund <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="vc-portfolio-stack rv d1">
+      <div class="vc-portfolio-item">
+        <span class="vc-portfolio-name">Sanabil</span>
+        <span class="vc-portfolio-tag">Portfolio</span>
+      </div>
+      <div class="vc-portfolio-item">
+        <span class="vc-portfolio-name">Widebot</span>
+        <span class="vc-portfolio-tag">Portfolio</span>
+      </div>
+      <div class="vc-portfolio-item">
+        <span class="vc-portfolio-name">Fruitful</span>
+        <span class="vc-portfolio-tag">Portfolio</span>
+      </div>
+      <div class="vc-portfolio-item">
+        <span class="vc-portfolio-name">Nawah</span>
+        <span class="vc-portfolio-tag">Portfolio</span>
+      </div>
     </div>
   </div>
 </section>
@@ -574,6 +628,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <li><a href="keheilan-kaif.html">KAIF</a></li>
       <li><a href="keheilan-sukuk.html">Sukuk</a></li>
       <li><a href="keheilan-index.html">Direct Indexing</a></li>
+      <li><a href="keheilan-vc.html">Venture Capital</a></li>
       <li><a href="keheilan-about.html">About Keheilan</a></li>
       <li><a href="keheilan-about.html#contact">Contact</a></li>
     </ul>

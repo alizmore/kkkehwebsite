@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Tech Fund — Keheilan Asset Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --accent:#00917C;
+  --accent2:#055A57;
+  --accent-light:rgba(5,90,87,0.10);
+  --aqua:#00FFDA;
+  --peach:#FFCE7B;
+  --dark:#055A57;
+  --dark2:#071e1a;
+  --ink:#141414;
+  --ink60:rgba(20,20,20,0.6);
+  --ink30:rgba(20,20,20,0.3);
+  --bg:#FFFFFF;
+  --bg2:#dbefec;
+  --line:rgba(5,90,87,0.14);
+  --serif:'Instrument Serif',Georgia,serif;
+  --sans:'DM Sans',sans-serif;
+  --r:12px;
+  --r-pill:999px;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,90,87,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-center{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:var(--r-pill);padding:6px 8px;}
+.nav-center a{font-size:0.78rem;font-weight:400;color:rgba(255,255,255,0.55);text-decoration:none;padding:7px 16px;border-radius:var(--r-pill);transition:all 0.2s;}
+.nav-center a:hover,.nav-center a.active{color:#fff;background:rgba(255,255,255,0.1);}
+.nav-cta{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:#141414;background:var(--peach);padding:10px 22px;border-radius:var(--r-pill);text-decoration:none;transition:all 0.2s;}
+@media(max-width:768px){.nav-center{display:none;}}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+.nav-hamburger span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:all 0.3s;}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-hamburger.open span:nth-child(2){opacity:0;}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(5,90,87,0.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);flex-direction:column;padding:8px 0 16px;}
+.mob-nav.open{display:flex;}
+.mob-nav a{font-size:0.9rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:14px 28px;transition:all 0.15s;}
+.mob-nav a:hover,.mob-nav a.active{color:#fff;background:rgba(255,255,255,0.05);}
+.mob-nav .mob-cta{margin:12px 24px 0;background:var(--peach);color:#141414;border-radius:var(--r-pill);text-align:center;font-weight:500;padding:13px 24px;}
+@media(max-width:768px){.nav-hamburger{display:flex;}.nav-cta{display:none;}}
+.nav-dropdown{position:relative;display:flex;align-items:center;}
+.nav-dropdown-btn{font-size:0.78rem;color:rgba(255,255,255,0.55);background:none;border:none;cursor:pointer;padding:7px 16px;border-radius:var(--r-pill);display:flex;align-items:center;gap:4px;font-family:var(--sans);transition:all 0.2s;}
+.nav-dropdown-btn:hover,.nav-dropdown.open .nav-dropdown-btn{color:#fff;background:rgba(255,255,255,0.1);}
+.nav-dropdown-btn svg{transition:transform 0.2s;}
+.nav-dropdown.open .nav-dropdown-btn svg{transform:rotate(180deg);}
+.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#053e3b;backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:6px;min-width:190px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+.nav-dropdown.open .nav-dropdown-menu{display:flex;flex-direction:column;}
+.nav-dropdown-menu a{font-size:0.8rem;color:rgba(255,255,255,0.6);text-decoration:none;padding:10px 16px;border-radius:8px;transition:all 0.15s;}
+.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{color:#fff;background:rgba(255,255,255,0.08);}
+.mob-strategy-btn{width:100%;text-align:left;background:none;border:none;font-size:0.9rem;color:rgba(255,255,255,0.65);padding:14px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);}
+.mob-strategy-btn:hover{color:#fff;}
+.mob-strategy-btn svg{transition:transform 0.2s;}
+.mob-strategy.open .mob-strategy-btn svg{transform:rotate(180deg);}
+.mob-strategy-items{display:none;flex-direction:column;}
+.mob-strategy.open .mob-strategy-items{display:flex;background:rgba(0,0,0,0.15);}
+.mob-strategy-items a{font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;padding:10px 28px 10px 44px;transition:color 0.15s;}
+.mob-strategy-items a:hover,.mob-strategy-items a.active{color:#fff;}
+
+/* ── HERO ── */
+.hero{min-height:100svh;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#071e1a;}
+.hero-pattern{position:absolute;inset:0;background-image:linear-gradient(rgba(0,145,124,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,145,124,0.06) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,black 30%,transparent 100%);}
+.hero-glow1{position:absolute;top:-80px;left:-80px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,145,124,0.18) 0%,transparent 65%);pointer-events:none;}
+.hero-glow2{position:absolute;bottom:-80px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(0,255,218,0.1) 0%,transparent 65%);pointer-events:none;}
+.hero-content{position:relative;z-index:1;max-width:780px;padding:0 24px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:500;color:var(--aqua);background:rgba(0,255,218,0.08);border:1px solid rgba(0,255,218,0.2);padding:8px 18px;border-radius:var(--r-pill);margin-bottom:28px;animation:fadeUp 0.6s 0.2s both;}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.4rem);font-weight:400;color:#fff;line-height:1.1;margin-bottom:20px;animation:fadeUp 0.6s 0.35s both;}
+.hero h1 em{font-style:italic;color:var(--aqua);}
+.hero-sub{font-size:1.0625rem;color:rgba(255,255,255,0.55);line-height:1.7;max-width:600px;margin:0 auto 32px;animation:fadeUp 0.6s 0.5s both;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;animation:fadeUp 0.6s 0.65s both;}
+.hero-pill{font-size:0.75rem;font-weight:500;color:rgba(255,255,255,0.5);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);padding:7px 16px;border-radius:var(--r-pill);}
+
+/* ── TAG PILL ── */
+.tag-pill{display:inline-flex;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);background:var(--accent-light);border:1px solid rgba(0,145,124,0.2);padding:6px 14px;border-radius:var(--r-pill);margin-bottom:16px;}
+.tag-pill-aqua{display:inline-flex;font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--aqua);background:rgba(0,255,218,0.08);border:1px solid rgba(0,255,218,0.2);padding:6px 14px;border-radius:var(--r-pill);margin-bottom:16px;}
+
+/* ── SECTION HEADER ── */
+.section-hd{text-align:center;max-width:640px;margin:0 auto 60px;}
+.section-hd h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink);margin:12px 0 14px;}
+.section-hd p{font-size:0.9375rem;color:var(--ink60);line-height:1.7;}
+.section-hd-dark h2{color:#fff;}
+.section-hd-dark p{color:rgba(255,255,255,0.5);}
+
+/* ── THESIS ── */
+.thesis{padding:100px 40px;background:var(--bg);}
+.thesis-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);}
+.thesis-card{background:var(--bg);padding:48px 40px;position:relative;overflow:hidden;}
+.thesis-num{font-family:var(--serif);font-size:5rem;font-weight:400;color:var(--ink);opacity:0.05;line-height:1;margin-bottom:20px;letter-spacing:-0.02em;}
+.thesis-title{font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:12px;line-height:1.4;}
+.thesis-body{font-size:0.875rem;color:var(--ink60);line-height:1.75;}
+@media(max-width:768px){.thesis-grid{grid-template-columns:1fr;}}
+
+/* ── FOCUS AREAS ── */
+.focus{padding:100px 40px;background:#071e1a;}
+.focus-inner{max-width:1200px;margin:0 auto;}
+.focus-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(255,255,255,0.06);margin-top:60px;}
+.focus-card{background:#071e1a;padding:40px 28px;text-align:center;transition:background 0.2s;}
+.focus-card:hover{background:#0d2b27;}
+.focus-ico{width:48px;height:48px;border-radius:10px;background:rgba(0,255,218,0.08);border:1px solid rgba(0,255,218,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--aqua);}
+.focus-name{font-size:0.875rem;font-weight:600;color:#fff;line-height:1.4;}
+@media(max-width:900px){.focus-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:600px){.focus-grid{grid-template-columns:1fr 1fr;}}
+
+/* ── HOW WE INVEST ── */
+.hiw{padding:100px 40px;background:var(--bg2);}
+.hiw-inner{max-width:1200px;margin:0 auto;}
+.hiw-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(5,90,87,0.14);margin-top:60px;}
+.hiw-card{background:var(--bg2);padding:44px 40px;}
+.hiw-num{font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+.hiw-title{font-size:1.05rem;font-weight:600;color:var(--ink);margin-bottom:10px;}
+.hiw-body{font-size:0.875rem;color:var(--ink60);line-height:1.75;}
+@media(max-width:768px){.hiw-grid{grid-template-columns:1fr;}}
+
+/* ── PORTFOLIO ── */
+.portfolio{padding:100px 40px;background:var(--bg);}
+.portfolio-inner{max-width:1200px;margin:0 auto;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);margin-top:60px;}
+.portfolio-card{background:var(--bg);padding:40px 32px;text-align:center;}
+.portfolio-name{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:8px;}
+.portfolio-tag{font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);opacity:0.6;}
+@media(max-width:768px){.portfolio-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:480px){.portfolio-grid{grid-template-columns:1fr;}}
+
+/* ── NEWS ── */
+.news{padding:100px 40px;background:#071e1a;}
+.news-inner{max-width:1200px;margin:0 auto;}
+.news-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,0.06);margin-top:60px;}
+.news-card{background:#071e1a;padding:44px 40px;transition:background 0.2s;}
+.news-card:hover{background:#0d2b27;}
+.news-date{font-size:0.72rem;font-weight:500;color:rgba(255,255,255,0.3);margin-bottom:16px;letter-spacing:0.04em;}
+.news-title{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:#fff;line-height:1.45;margin-bottom:14px;}
+.news-body{font-size:0.85rem;color:rgba(255,255,255,0.45);line-height:1.7;margin-bottom:24px;}
+.news-link{font-size:0.78rem;font-weight:600;color:var(--aqua);text-decoration:none;display:inline-flex;align-items:center;gap:6px;letter-spacing:0.04em;}
+.news-link svg{transition:transform 0.2s;}
+.news-link:hover svg{transform:translateX(4px);}
+@media(max-width:768px){.news-grid{grid-template-columns:1fr;}}
+
+/* ── CTA BANNER ── */
+.cta-banner{padding:80px 40px;background:#071e1a;text-align:center;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;bottom:-80px;left:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(5,90,87,0.3) 0%,transparent 65%);}
+.cta-banner h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;color:#fff;margin-bottom:12px;position:relative;}
+.cta-banner p{font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-bottom:32px;position:relative;}
+.cta-banner a{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:#141414;background:var(--peach);padding:14px 30px;border-radius:var(--r-pill);text-decoration:none;position:relative;transition:all 0.2s;}
+.cta-banner a:hover{background:#fff;transform:translateY(-2px);}
+
+/* ── FOOTER ── */
+footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.08);}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.footer-logo{font-family:var(--serif);font-size:1rem;color:#fff;text-decoration:none;}
+.footer-links{display:flex;gap:24px;list-style:none;}
+.footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:#fff;}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+
+/* ── ANIMS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.rv{opacity:0;transform:translateY(20px);transition:opacity 0.65s cubic-bezier(0.22,1,0.36,1),transform 0.65s cubic-bezier(0.22,1,0.36,1);}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:44px;width:auto;display:block;"></a>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn">Strategy <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-dropdown-menu">
+        <a href="keheilan-kaif.html">KAIF</a>
+        <a href="keheilan-index.html">Direct Indexing</a>
+        <a href="keheilan-sukuk.html">Sukuk</a>
+      </div>
+    </div>
+    <a href="keheilan-vc.html" class="active">Venture Capital</a>
+    <a href="keheilan-about.html">About Keheilan</a>
+  </div>
+  <a href="keheilan-about.html" class="nav-cta">Schedule a Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <div class="mob-strategy">
+    <button class="mob-strategy-btn">Strategy <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mob-strategy-items">
+      <a href="keheilan-kaif.html">KAIF</a>
+      <a href="keheilan-index.html">Direct Indexing</a>
+      <a href="keheilan-sukuk.html">Sukuk</a>
+    </div>
+  </div>
+  <a href="keheilan-vc.html" class="active">Venture Capital</a>
+  <a href="keheilan-about.html">About Keheilan</a>
+  <a href="keheilan-about.html" class="mob-cta">Schedule a Call</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-glow1"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Deep Tech Fund · Venture Capital</div>
+    <h1>Backing the Builders of <em>Deep Technology.</em></h1>
+    <p class="hero-sub">We invest in a concentrated set of deep technology companies where long-term value creation outweighs short-term noise.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">Pre-Seed to Series A</span>
+      <span class="hero-pill">MENA Focus</span>
+      <span class="hero-pill">Active Ownership</span>
+    </div>
+  </div>
+</div>
+
+<!-- THESIS -->
+<section class="thesis">
+  <div class="section-hd rv">
+    <div class="tag-pill">Investment Thesis</div>
+    <h2>Where we see durable value.</h2>
+    <p>Keheilan's venture strategy targets structural gaps in the MENA market, driving durable economic value through deep technology.</p>
+  </div>
+  <div class="thesis-grid rv d1">
+    <div class="thesis-card">
+      <div class="thesis-num">0101</div>
+      <div class="thesis-title">Barriers to entry are structurally high</div>
+      <p class="thesis-body">Deep technology ventures require specialized expertise, significant capital, and long development cycles, creating natural moats that compound over time.</p>
+    </div>
+    <div class="thesis-card">
+      <div class="thesis-num">0202</div>
+      <div class="thesis-title">Local innovation is underdeveloped but strategically important</div>
+      <p class="thesis-body">The region's technical talent and research infrastructure are growing faster than capital deployment, creating a durable opportunity for early conviction.</p>
+    </div>
+    <div class="thesis-card">
+      <div class="thesis-num">0303</div>
+      <div class="thesis-title">Government, enterprise, and market demand are structurally aligned</div>
+      <p class="thesis-body">Policy priorities, corporate needs, and consumer demand increasingly converge around technological self-sufficiency, de-risking the category over time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="focus">
+  <div class="focus-inner">
+    <div class="section-hd rv" style="margin-left:0;margin-right:0;text-align:left;max-width:600px;">
+      <div class="tag-pill-aqua">Focus Areas</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:#fff;margin:12px 0 14px;">Technical Moats / Verticals</h2>
+      <p style="font-size:0.9375rem;color:rgba(255,255,255,0.5);line-height:1.7;">We invest in DeepTech verticals where technical depth creates defensibility.</p>
+    </div>
+    <div class="focus-grid rv d1">
+      <div class="focus-card">
+        <div class="focus-ico">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/><path d="M5 18c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16 6l2-2M18 8h2M16 10l2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="focus-name">AI & ML</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ico">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M15 3v4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="focus-name">BioTech</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ico">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="12" width="4" height="7" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="9" y="8" width="4" height="11" rx="1" stroke="currentColor" stroke-width="1.8"/><rect x="15" y="4" width="4" height="15" rx="1" stroke="currentColor" stroke-width="1.8"/><path d="M5 12V7M11 8V4M17 4V2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="focus-name">IoT / Industrial Technology</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ico">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="5" width="16" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 9h8M7 13h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="16" cy="13" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="focus-name">Advanced Hardware & Semiconductors</div>
+      </div>
+      <div class="focus-card">
+        <div class="focus-ico">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L4 5.5v7c0 4.4 2.9 8.5 7 10 4.1-1.5 7-5.6 7-10v-7L11 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="currentColor" fill-opacity="0.08"/><path d="M8 11l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="focus-name">Cybersecurity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE INVEST -->
+<section class="hiw">
+  <div class="hiw-inner">
+    <div class="section-hd rv">
+      <div class="tag-pill">How We Invest</div>
+      <h2>Deliberate. Focused. Deeply involved.</h2>
+      <p>Our investment approach is built around concentrated conviction, active partnership, and long-term value creation.</p>
+    </div>
+    <div class="hiw-grid rv d1">
+      <div class="hiw-card">
+        <div class="hiw-num">01</div>
+        <div class="hiw-title">Selective by Design</div>
+        <p class="hiw-body">We deploy capital into a limited number of high-conviction investments. Deal volume is not a goal. Each position we take reflects deep diligence and genuine conviction in the team and category.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-num">02</div>
+        <div class="hiw-title">Early to Growth Stages</div>
+        <p class="hiw-body">Our focus spans pre-seed through Series A, with the ability to lead or co-lead rounds and support follow-on growth. We enter early enough to shape, not just back.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-num">03</div>
+        <div class="hiw-title">Regional First, Global Potential</div>
+        <p class="hiw-body">We back companies solving regional problems with the potential to scale beyond local markets. MENA is the starting point, not the ceiling.</p>
+      </div>
+      <div class="hiw-card">
+        <div class="hiw-num">04</div>
+        <div class="hiw-title">Active Ownership</div>
+        <p class="hiw-body">We work closely with founders on strategy, governance, and access to capital, while maintaining disciplined boundaries. Partnership without overreach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO COMPANIES -->
+<section class="portfolio">
+  <div class="portfolio-inner">
+    <div class="section-hd rv">
+      <div class="tag-pill">Portfolio</div>
+      <h2>Our Portfolio Companies</h2>
+      <p>We partner with innovative companies to drive growth and success.</p>
+    </div>
+    <div class="portfolio-grid rv d1">
+      <div class="portfolio-card">
+        <div class="portfolio-name">Sanabil</div>
+        <div class="portfolio-tag">Portfolio Company</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-name">Widebot</div>
+        <div class="portfolio-tag">Portfolio Company</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-name">Fruitful</div>
+        <div class="portfolio-tag">Portfolio Company</div>
+      </div>
+      <div class="portfolio-card">
+        <div class="portfolio-name">Nawah</div>
+        <div class="portfolio-tag">Portfolio Company</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS & INSIGHTS -->
+<section class="news">
+  <div class="news-inner">
+    <div class="section-hd rv" style="margin-left:0;margin-right:0;text-align:left;max-width:600px;">
+      <div class="tag-pill-aqua">News & Insights</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:#fff;margin:12px 0 14px;">Stay informed.</h2>
+      <p style="font-size:0.9375rem;color:rgba(255,255,255,0.5);line-height:1.7;">Latest investments, portfolio milestones, and thought leadership on deep technology innovation.</p>
+    </div>
+    <div class="news-grid rv d1">
+      <div class="news-card">
+        <div class="news-date">November 10, 2025</div>
+        <div class="news-title">Dr. Ahmed Abdelhamid Delivers Keynote Address at Nawah Scientific's 10-Year Anniversary Celebration</div>
+        <p class="news-body">Dr. Ahmed Abdelhamid was honored to deliver a keynote address on behalf of early and former investors of Nawah Scientific, during the celebration marking ten years since the establishment of one of the region's leading scientific technology companies.</p>
+        <a href="#" class="news-link">Read More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">December 5, 2025</div>
+        <div class="news-title">Keheilan Announces Strategic Investment in Fruitful Solutions</div>
+        <p class="news-body">Keheilan is pleased to announce a strategic investment in Fruitful Solutions, marking an important milestone in the company's journey and in Keheilan's continued commitment to supporting impactful technology ventures.</p>
+        <a href="#" class="news-link">Read More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">November 20, 2025</div>
+        <div class="news-title">Keheilan Co-Hosts Semiconductor Roundtable Highlighting Egypt's DeepTech Potential</div>
+        <p class="news-body">Egypt's engineering talent remains one of the country's strongest national assets. Keheilan co-hosted the Semiconductor Roundtable in collaboration with Entlaq Holding to maximize this potential and connect regional capital with technical founders.</p>
+        <a href="#" class="news-link">Read More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="news-card">
+        <div class="news-date">October 15, 2025</div>
+        <div class="news-title">Dr. Ahmed Abdelhamid Moderates DeepTech Investment Panel at Deep Tech MEA Summit</div>
+        <p class="news-body">Ahmed Abdelhamid, Ph.D., CEO of Keheilan, participated as moderator in a high-level panel at the Deep Tech MEA Summit, exploring deep tech investment sustainability and the conditions required to build enduring technology companies in the region.</p>
+        <a href="#" class="news-link">Read More <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner" id="contact">
+  <h2 class="rv">Partner With Us.</h2>
+  <p class="rv d1">Interested in learning more about our deep tech investment approach? Let's start a conversation.</p>
+  <a href="mailto:invest@keheilan.com" class="rv d2">
+    Contact Us
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <a href="/" class="footer-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:38px;width:auto;display:block;"></a>
+    <ul class="footer-links">
+      <li><a href="keheilan-kaif.html">KAIF</a></li><li><a href="keheilan-sukuk.html">Sukuk</a></li><li><a href="keheilan-index.html">Direct Indexing</a></li><li><a href="keheilan-vc.html">Venture Capital</a></li><li><a href="keheilan-about.html">About Keheilan</a></li><li><a href="keheilan-about.html#contact">Contact</a></li>
+    </ul>
+    <span class="footer-copy">&copy; 2025 Keheilan Asset Management</span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('on');io.unobserve(x.target);}}),{threshold:0.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=scrollY>20?'rgba(5,90,87,0.98)':'rgba(5,90,87,0.95)';},{passive:true});
+const hbg=document.getElementById('hamburger');const mobNav=document.getElementById('mobNav');hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mobNav.classList.toggle('open');});
+const dd=document.querySelector('.nav-dropdown');if(dd){dd.querySelector('.nav-dropdown-btn').addEventListener('click',e=>{e.stopPropagation();dd.classList.toggle('open');});document.addEventListener('click',()=>dd.classList.remove('open'));}
+const ms=document.querySelector('.mob-strategy');if(ms){ms.querySelector('.mob-strategy-btn').addEventListener('click',()=>ms.classList.toggle('open'));}
+mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mobNav.classList.remove('open');}));
+</script>
+</body>
+</html>
