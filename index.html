@@ -186,30 +186,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 
 /* ── FEES ── */
 .fees{padding:100px 40px;background:var(--bg);}
-.fees-grid{max-width:1100px;margin:48px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
-.fee-card{border-radius:var(--r);padding:40px 36px;border:1px solid var(--line);}
-.fee-card.featured{background:var(--dark);border-color:var(--dark);}
-.fee-lbl{font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink60);margin-bottom:16px;}
-.fee-card.featured .fee-lbl{color:rgba(255,255,255,0.35);}
-.fee-product{font-family:var(--serif);font-size:1.6rem;font-weight:400;color:var(--ink);margin-bottom:4px;line-height:1.2;}
-.fee-card.featured .fee-product{color:#fff;}
-.fee-entry{font-size:2.4rem;font-family:var(--serif);color:var(--accent);margin-bottom:4px;line-height:1;}
-.fee-card.featured .fee-entry{color:var(--aqua);}
-.fee-perf{font-size:0.82rem;color:var(--ink60);margin-bottom:24px;}
-.fee-card.featured .fee-perf{color:rgba(255,255,255,0.35);}
-.fee-divider{height:1px;background:var(--line);margin-bottom:24px;}
-.fee-card.featured .fee-divider{background:rgba(255,255,255,0.08);}
-.fee-features{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:32px;}
-.fee-features li{font-size:0.875rem;color:var(--ink60);display:flex;align-items:center;gap:8px;}
-.fee-card.featured .fee-features li{color:rgba(255,255,255,0.45);}
-.fee-features li::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);flex-shrink:0;}
-.fee-card.featured .fee-features li::before{background:var(--aqua);}
-.fee-btn{display:block;text-align:center;font-size:0.82rem;font-weight:500;padding:13px;border-radius:var(--r-pill);text-decoration:none;transition:all 0.2s;}
-.fee-btn-outline{color:var(--ink);border:1px solid var(--line);}
-.fee-btn-outline:hover{border-color:var(--accent);color:var(--accent);}
-.fee-btn-accent{color:var(--dark);background:var(--aqua);}
-.fee-btn-accent:hover{background:var(--accent);color:#fff;}
-@media(max-width:768px){.fees-grid{grid-template-columns:1fr;}}
+.strat-list{max-width:800px;margin:48px auto 0;display:flex;flex-direction:column;gap:2px;background:var(--line);}
+.strat-row{background:var(--bg);padding:32px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;transition:background 0.2s;}
+.strat-row:hover{background:#f9fdfc;}
+.strat-row-left{display:flex;flex-direction:column;gap:6px;}
+.strat-row-name{font-family:var(--serif);font-size:1.3rem;font-weight:400;color:var(--ink);}
+.strat-row-desc{font-size:0.85rem;color:var(--ink60);}
+.strat-row-link{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:500;color:var(--accent);text-decoration:none;white-space:nowrap;flex-shrink:0;transition:gap 0.2s;}
+.strat-row-link:hover{gap:12px;}
+@media(max-width:768px){.strat-row{flex-direction:column;align-items:flex-start;gap:16px;}}
 
 /* ── INSIGHTS ── */
 .insights{padding:100px 40px;background:var(--bg2);}
@@ -329,7 +314,6 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <div class="stat"><div class="stat-num"><em>3</em></div><div class="stat-label">Distinct Investment Strategies</div></div>
       <div class="stat"><div class="stat-num"><em>+40</em>%</div><div class="stat-label">KAIF Simulated Return · 9 Months</div></div>
       <div class="stat"><div class="stat-num"><em>4–6</em>%</div><div class="stat-label">Sukuk Target Annual Return</div></div>
-      <div class="stat"><div class="stat-num"><em>0</em>%</div><div class="stat-label">Performance Fees on All Products</div></div>
     </div>
   </div>
 </section>
@@ -358,11 +342,10 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <div class="prod-accent-bar"></div>
       <div class="prod-num">02</div>
       <div class="prod-title">Sukuk Portfolios</div>
-      <p class="prod-desc">Capital-preserving fixed income built from Shariah-compliant bonds. Four to six percent target annual return. Built for investors who set the terms before they invest.</p>
+      <p class="prod-desc">Capital-preserving strategy built from investment-grade Shariah-compliant Sukuk instruments. Returns compound back into the portfolio by default.</p>
       <div class="prod-pills">
         <span class="prod-pill">Capital Preservation</span>
         <span class="prod-pill">4–6% Target</span>
-        <span class="prod-pill">0% Entry</span>
       </div>
       <a href="#" class="prod-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
@@ -370,11 +353,10 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <div class="prod-accent-bar"></div>
       <div class="prod-num">03</div>
       <div class="prod-title">Direct Indexing</div>
-      <p class="prod-desc">Four portfolios benchmarked to the world's leading Shariah ETFs: SPUS, SPWO, SPRE, SPSK. Global benchmarks, built for your risk appetite. From $100K.</p>
+      <p class="prod-desc">Four portfolios benchmarked to the world's leading Shariah ETFs: SPUS, SPWO, SPRE, SPSK. Global benchmarks, built for your risk appetite. From $120K.</p>
       <div class="prod-pills">
         <span class="prod-pill">Global Benchmarks</span>
-        <span class="prod-pill">0.75% Entry</span>
-        <span class="prod-pill">From $100K</span>
+        <span class="prod-pill">From $120K</span>
       </div>
       <a href="#" class="prod-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
@@ -428,8 +410,8 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
       <div class="why-grid">
         <div class="why-card">
           <div class="why-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.1"/></svg></div>
-          <h4>Shariah Compliance Built In</h4>
-          <p>Every instrument is screened before selection. Compliance is structural, not a filter applied after the fact.</p>
+          <h4>Shariah-Compliant Investment Universe</h4>
+          <p>Keheilan operates within a Shariah-compliant investment universe. Every strategy is built from the ground up using screened instruments, making compliance structural rather than a filter applied after selection.</p>
         </div>
         <div class="why-card">
           <div class="why-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="2"/><path d="M10 5v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -439,7 +421,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <div class="why-card">
           <div class="why-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 14l4-6 4 4 3-5 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="6" r="1.5" fill="currentColor"/></svg></div>
           <h4>Transparent Fee Structure</h4>
-          <p>Zero performance fees across all products. What your portfolio earns is entirely yours.</p>
+          <p>Fees are disclosed upfront for every strategy. Structure varies by product — review each strategy page for the full fee breakdown.</p>
         </div>
         <div class="why-card">
           <div class="why-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2L4 5v6c0 4 2.4 7.5 6 9 3.6-1.5 6-5 6-9V5L10 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.08"/></svg></div>
@@ -468,7 +450,6 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <div class="feat-pt">Sourced from BlackRock and Vanguard ETFs</div>
         <div class="feat-pt">AI rebalancing, continuous and automatic</div>
         <div class="feat-pt">All instruments Shariah-screened before entry</div>
-        <div class="feat-pt">No discretionary overrides</div>
       </div>
     </div>
     <div class="feat-info">
@@ -500,7 +481,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
           <svg class="step-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="step-title">Select Your Strategy</div>
-        <p class="step-body">Choose from KAIF for AI-managed multi-asset growth, Sukuk Portfolios for capital preservation and income, or Managed Index Portfolios for global benchmark exposure matched to your risk appetite.</p>
+        <p class="step-body">Choose from KAIF for AI-managed multi-asset growth, Sukuk Portfolios for capital preservation with compounding returns, or Direct Indexing for global benchmark exposure matched to your risk appetite.</p>
       </div>
       <div class="process-step">
         <div class="step-header">
@@ -508,7 +489,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
           <svg class="step-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <div class="step-title">We Build and Screen</div>
-        <p class="step-body">Keheilan constructs your portfolio from Shariah-compliant instruments, applying our screening methodology at every stage. Compliance is embedded in construction, not applied retroactively.</p>
+        <p class="step-body">Keheilan constructs your portfolio within a Shariah-compliant investment universe. Instrument selection starts inside a compliant universe — not the other way around.</p>
       </div>
       <div class="process-step">
         <div class="step-header">
@@ -523,55 +504,34 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
 </section>
 
 
-<!-- FEES -->
+<!-- FEES / STRATEGIES CTA -->
 <section class="fees">
   <div class="section-hd rv">
-    <div class="tag-pill">Fee Structure</div>
-    <h2>Transparent Fees Across Every Strategy</h2>
-    <p>No hidden charges. No performance fees. What the portfolio earns is yours.</p>
+    <div class="tag-pill">Our Strategies</div>
+    <h2>Each strategy has its own structure. Explore the one that fits.</h2>
+    <p>Fee structures, minimums, and terms differ by product. Review any strategy for full transparency.</p>
   </div>
-  <div class="fees-grid">
-    <div class="fee-card rv">
-      <div class="fee-lbl">KAIF</div>
-      <div class="fee-product">Keheilan AI Index Fund</div>
-      <div class="fee-entry">0%</div>
-      <div class="fee-perf">Entry Fee · 0% Performance Fee</div>
-      <div class="fee-divider"></div>
-      <ul class="fee-features">
-        <li>AI-managed multi-asset portfolio</li>
-        <li>Continuous auto-rebalancing</li>
-        <li>Shariah-screened at every stage</li>
-        <li>Simulated +40% over 9 months</li>
-      </ul>
-      <a href="#" class="fee-btn fee-btn-outline">View KAIF</a>
+  <div class="strat-list rv d1">
+    <div class="strat-row">
+      <div class="strat-row-left">
+        <div class="strat-row-name">KAIF</div>
+        <div class="strat-row-desc">AI-managed, multi-asset, Shariah-compliant</div>
+      </div>
+      <a href="keheilan-kaif.html" class="strat-row-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="fee-card featured rv d1">
-      <div class="fee-lbl">Sukuk Portfolios</div>
-      <div class="fee-product">Capital Preservation</div>
-      <div class="fee-entry">0%</div>
-      <div class="fee-perf">Entry Fee · 0% Performance Fee</div>
-      <div class="fee-divider"></div>
-      <ul class="fee-features">
-        <li style="color:rgba(255,255,255,0.5);">4–6% target annual return</li>
-        <li style="color:rgba(255,255,255,0.5);">Investment-grade Sukuk only</li>
-        <li style="color:rgba(255,255,255,0.5);">Duration managed for stability</li>
-        <li style="color:rgba(255,255,255,0.5);">Built for capital protection</li>
-      </ul>
-      <a href="#" class="fee-btn fee-btn-accent">View Sukuk</a>
+    <div class="strat-row">
+      <div class="strat-row-left">
+        <div class="strat-row-name">Sukuk Portfolios</div>
+        <div class="strat-row-desc">Capital preservation with compounding returns</div>
+      </div>
+      <a href="keheilan-sukuk.html" class="strat-row-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="fee-card rv d2">
-      <div class="fee-lbl">Direct Indexing</div>
-      <div class="fee-product">Global Benchmarks</div>
-      <div class="fee-entry">0.75%</div>
-      <div class="fee-perf">Entry Fee · 0% Performance Fee · From $100K</div>
-      <div class="fee-divider"></div>
-      <ul class="fee-features">
-        <li>SPUS, SPWO, SPRE, SPSK</li>
-        <li>Four risk profiles available</li>
-        <li>Full construction and rebalancing</li>
-        <li>Industry average: 1–3% entry</li>
-      </ul>
-      <a href="#" class="fee-btn fee-btn-outline">View Portfolios</a>
+    <div class="strat-row">
+      <div class="strat-row-left">
+        <div class="strat-row-name">Direct Indexing</div>
+        <div class="strat-row-desc">Global benchmarks, four risk profiles, from $120K</div>
+      </div>
+      <a href="keheilan-index.html" class="strat-row-link">View Strategy <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2.5 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
