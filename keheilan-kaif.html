@@ -113,11 +113,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .fee-block.dark .fee-context{color:rgba(255,255,255,0.2);}
 @media(max-width:768px){.fees-row{grid-template-columns:1fr;}}
 /* CTA BANNER */
-.cta-banner{padding:80px 40px;background:var(--accent2);text-align:center;position:relative;overflow:hidden;}
-.cta-banner::before{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(0,255,218,0.15) 0%,transparent 65%);}
+.cta-banner{padding:80px 40px;background:#071e1a;text-align:center;position:relative;overflow:hidden;}
+.cta-banner::before{content:'';position:absolute;top:-80px;right:-80px;width:350px;height:350px;background:radial-gradient(circle,rgba(5,90,87,0.3) 0%,transparent 65%);}
 .cta-banner h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;color:#fff;margin-bottom:12px;line-height:1.2;position:relative;}
 .cta-banner p{font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-bottom:32px;position:relative;}
-.cta-banner a{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:var(--dark);background:var(--aqua);padding:14px 30px;border-radius:var(--r-pill);text-decoration:none;position:relative;transition:all 0.2s;}
+.cta-banner a{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:#141414;background:var(--peach);padding:14px 30px;border-radius:var(--r-pill);text-decoration:none;position:relative;transition:all 0.2s;}
 .cta-banner a:hover{background:#fff;}
 /* FOOTER */
 footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.08);}
@@ -172,7 +172,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="hero-glow"></div>
   <div class="hero-content">
     <div class="hero-tag">KAIF · Keheilan AI Index Fund</div>
-    <h1>Built on the World's Best Research. <em>Sharpened by AI. Bound by Shariah.</em></h1>
+    <h1>Sourced from the World's Best Funds, Complied with Shariah, <span style="color:var(--accent)">Managed by AI.</span></h1>
     <p class="hero-sub">A multi-asset fund sourcing top-performing holdings from BlackRock and Vanguard ETFs, reweighted continuously by AI, screened at every layer for Shariah compliance.</p>
     <div class="hero-pills">
       <span class="hero-pill">Shariah-Compliant</span>
@@ -186,10 +186,6 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <div class="hero-stat-label">Simulated Return</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">9 mo</div>
-        <div class="hero-stat-label">Apr 2025 – Jan 2026</div>
-      </div>
-      <div class="hero-stat">
         <div class="hero-stat-num">0%</div>
         <div class="hero-stat-label">Performance Fee</div>
       </div>
@@ -201,9 +197,9 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="overview-inner">
     <div class="rv">
       <div class="tag-pill">About KAIF</div>
-      <h2>Built on institutional research. <em>Optimized by AI. Compliant by design.</em></h2>
-      <p>KAIF draws from top-performing holdings inside ETFs managed by BlackRock, Vanguard, and other leading firms. Institutional analysts identify the quality. AI goes further — reweighting positions across equities, gold, and Sukuk to maximize risk-adjusted returns.</p>
-      <p>Every asset passes rigorous Shariah screening before inclusion. Prohibited sectors and excessive leverage are excluded by design, not applied as an afterthought.</p>
+      <h2>Built on the world's best standards.</h2>
+      <p>KAIF draws its universe from the top-performing holdings inside ETFs managed by the world's leading firms: BlackRock, Vanguard, and others. What institutional analysts have already identified as high-quality, the fund inherits.</p>
+      <p>What AI does is go further. Algorithmic models then evaluate each holding across market capitalization and financial metrics, reweighting positions to maximize risk-adjusted performance. Every asset passes rigorous Shariah screening before inclusion. The result is a portfolio that combines institutional-grade research, AI-driven optimization, and faith-based ethics, across equities, gold, and Sukuk.</p>
     </div>
     <div class="overview-right rv d1">
       <div class="ov-card">
@@ -267,7 +263,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <div class="perf-glow"></div>
         <div class="perf-eyebrow">Simulated Return</div>
         <div class="perf-number">+40%</div>
-        <div class="perf-period">April 2025 — January 2026 · 9 Months</div>
+        <div class="perf-period">April 2025 to January 2026 · 9 Months</div>
         <div class="perf-disclaimer">Simulated performance is not a guarantee of future results. Past or simulated results do not predict future performance. This is for illustrative purposes only.</div>
       </div>
       <div class="perf-points">
@@ -282,40 +278,6 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
         <div class="perf-point">
           <div class="perf-point-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L4 4v4c0 3 1.6 5.5 4 6.5C10.4 13.5 12 11 12 8V4L8 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/></svg></div>
           <div class="perf-point-text"><strong>Full Shariah Compliance</strong>Every position screened at entry and monitored continuously for compliance drift.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="compliance">
-  <div class="compliance-inner">
-    <div class="compliance-left rv">
-      <div class="tag-pill">Shariah Framework</div>
-      <h2>Principles you can rely on. Built into the structure.</h2>
-    </div>
-    <div class="rv d1">
-      <p style="font-size:1rem;color:var(--ink60);line-height:1.75;margin-bottom:32px;">KAIF's Shariah compliance is not a post-screening filter applied to an otherwise conventional portfolio. It is embedded in the investment process from initial selection through ongoing monitoring.</p>
-      <div class="compliance-grid">
-        <div class="comp-card">
-          <div class="comp-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h4>Prohibited Sectors Excluded</h4>
-          <p>Alcohol, tobacco, weapons, conventional finance, adult entertainment — all systematically screened out at the universe level.</p>
-        </div>
-        <div class="comp-card">
-          <div class="comp-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L4 6v5c0 4 2.5 7 6 8.5 3.5-1.5 6-4.5 6-8.5V6L10 3z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.08"/></svg></div>
-          <h4>Debt Ratio Compliance</h4>
-          <p>Companies with total debt exceeding 33% of total assets are excluded. Leverage constraints are applied to every position.</p>
-        </div>
-        <div class="comp-card">
-          <div class="comp-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/><path d="M10 6v4l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h4>Continuous Monitoring</h4>
-          <p>Compliance is monitored on an ongoing basis — not just at entry. Positions that drift out of compliance are flagged and replaced systematically.</p>
-        </div>
-        <div class="comp-card">
-          <div class="comp-ico"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 7h14M3 11h14M3 15h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <h4>Revenue Screening</h4>
-          <p>Non-compliant revenue must be less than 5% of total revenue. Income from interest, gambling, and impermissible activities is tracked and excluded.</p>
         </div>
       </div>
     </div>
