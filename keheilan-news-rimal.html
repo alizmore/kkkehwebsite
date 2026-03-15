@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rimal Semiconductors — Keheilan Asset Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --accent:#00917C;--accent2:#055A57;--accent-light:rgba(5,90,87,0.10);
+  --aqua:#00FFDA;--peach:#FFCE7B;
+  --dark:#055A57;--dark2:#071e1a;--ink:#141414;--ink60:rgba(20,20,20,0.6);--ink30:rgba(20,20,20,0.3);
+  --bg:#ffffff;--bg2:#dbefec;--line:rgba(5,90,87,0.14);
+  --serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',sans-serif;
+  --r:12px;--r-pill:999px;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);}
+.nav-logo{font-family:var(--serif);font-size:1.05rem;color:#fff;text-decoration:none;}
+.nav-logo img{filter:brightness(0) saturate(100%);}
+.nav-center{display:flex;align-items:center;gap:4px;background:var(--accent-light);border:1px solid rgba(0,145,124,0.15);border-radius:var(--r-pill);padding:6px 8px;}
+.nav-center a{font-size:0.78rem;color:rgba(5,90,87,0.65);text-decoration:none;padding:7px 16px;border-radius:var(--r-pill);transition:all 0.2s;}
+.nav-center a.active,.nav-center a:hover{color:var(--accent2);background:rgba(0,145,124,0.1);}
+.nav-cta{font-size:0.78rem;font-weight:500;color:#141414;background:var(--peach);padding:10px 22px;border-radius:var(--r-pill);text-decoration:none;}
+@media(max-width:768px){.nav-center{display:none;}}
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}.nav-hamburger span{display:block;width:22px;height:2px;background:var(--accent);border-radius:2px;transition:all 0.3s;}.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}.nav-hamburger.open span:nth-child(2){opacity:0;}.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}.mob-nav{display:none;position:fixed;top:68px;left:0;right:0;z-index:99;background:rgba(5,90,87,0.98);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.08);flex-direction:column;padding:8px 0 16px;}.mob-nav.open{display:flex;}.mob-nav a{font-size:0.9rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:14px 28px;transition:all 0.15s;}.mob-nav a:hover,.mob-nav a.active{color:#fff;background:rgba(255,255,255,0.05);}.mob-nav .mob-cta{margin:12px 24px 0;background:var(--peach);color:#141414;border-radius:var(--r-pill);text-align:center;font-weight:500;padding:13px 24px;}@media(max-width:768px){.nav-hamburger{display:flex;}.nav-cta{display:none;}}.nav-dropdown{position:relative;display:flex;align-items:center;}.nav-dropdown-btn{font-size:0.78rem;color:rgba(5,90,87,0.65);background:none;border:none;cursor:pointer;padding:7px 16px;border-radius:var(--r-pill);display:flex;align-items:center;gap:4px;font-family:var(--sans);transition:all 0.2s;}.nav-dropdown-btn:hover,.nav-dropdown-btn.active,.nav-dropdown.open .nav-dropdown-btn{color:var(--accent2);background:rgba(0,145,124,0.1);}.nav-dropdown-btn svg{transition:transform 0.2s;}.nav-dropdown.open .nav-dropdown-btn svg{transform:rotate(180deg);}.nav-dropdown-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#ffffff;backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:12px;padding:6px;min-width:190px;z-index:200;box-shadow:0 8px 32px rgba(0,0,0,0.08);}.nav-dropdown.open .nav-dropdown-menu{display:flex;flex-direction:column;}.nav-dropdown-menu a{font-size:0.8rem;color:rgba(5,90,87,0.65);text-decoration:none;padding:10px 16px;border-radius:8px;transition:all 0.15s;}.nav-dropdown-menu a:hover,.nav-dropdown-menu a.active{color:var(--accent2);background:rgba(0,145,124,0.08);}.mob-strategy-btn{width:100%;text-align:left;background:none;border:none;font-size:0.9rem;color:rgba(255,255,255,0.65);padding:14px 28px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);}.mob-strategy-btn:hover,.mob-strategy-btn.active{color:#fff;}.mob-strategy-btn svg{transition:transform 0.2s;}.mob-strategy.open .mob-strategy-btn svg{transform:rotate(180deg);}.mob-strategy-items{display:none;flex-direction:column;}.mob-strategy.open .mob-strategy-items{display:flex;background:rgba(0,0,0,0.15);}.mob-strategy-items a{font-size:0.85rem;color:rgba(255,255,255,0.5);text-decoration:none;padding:10px 28px 10px 44px;transition:color 0.15s;}.mob-strategy-items a:hover,.mob-strategy-items a.active{color:#fff;}
+/* PRESS RELEASE */
+.pr-hero{padding:120px 40px 60px;background:var(--bg);}
+.pr-hero-inner{max-width:820px;margin:0 auto;}
+.pr-tag{display:inline-flex;font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);background:var(--accent-light);padding:6px 14px;border-radius:var(--r-pill);margin-bottom:20px;}
+.pr-meta{font-size:0.75rem;color:var(--ink30);margin-bottom:16px;letter-spacing:0.04em;}
+.pr-hero h1{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:16px;}
+.pr-sub{font-size:1rem;color:var(--ink60);line-height:1.7;font-style:italic;}
+.pr-photo{width:100%;max-height:520px;object-fit:cover;display:block;border-radius:var(--r);margin:40px 0;}
+.pr-photo-wrap{max-width:820px;margin:0 auto 0;}
+.pr-body{padding:0 40px 80px;max-width:820px;margin:0 auto;}
+.pr-body p{font-size:0.9375rem;color:var(--ink60);line-height:1.85;margin-bottom:20px;}
+.pr-body h2{font-family:var(--serif);font-size:1.4rem;font-weight:400;color:var(--ink);margin:36px 0 12px;}
+.pr-body blockquote{border-left:3px solid var(--accent);padding:16px 24px;margin:24px 0;background:var(--bg2);border-radius:0 var(--r) var(--r) 0;}
+.pr-body blockquote p{margin-bottom:0;font-style:italic;}
+.pr-divider{height:1px;background:var(--line);margin:32px 0;}
+footer{background:var(--dark2);padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1fr auto;gap:48px;margin-bottom:40px;}
+.footer-brand{max-width:400px;}
+.footer-about{font-size:0.75rem;line-height:1.75;color:rgba(255,255,255,0.4);margin-top:12px;}
+.footer-links-wrap{display:flex;gap:48px;}
+.footer-col{display:flex;flex-direction:column;gap:10px;}
+.footer-col-label{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:4px;}
+.footer-col a{font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-disclaimer{border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;margin-bottom:24px;}
+.footer-disc-label{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:10px;margin-top:16px;}
+.footer-disc-label:first-child{margin-top:0;}
+.footer-disc-body p{font-size:0.68rem;color:rgba(255,255,255,0.3);line-height:1.75;margin-bottom:8px;}
+.footer-disc-body strong{color:rgba(255,255,255,0.45);}
+.footer-disc-body a{color:rgba(255,255,255,0.45);text-decoration:none;}
+.footer-disc-divider{height:1px;background:rgba(255,255,255,0.08);margin:16px 0 14px;}
+.footer-bottom{font-size:0.68rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:44px;width:auto;display:block;"></a>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-btn">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div class="nav-dropdown-menu">
+        <a href="keheilan-kaif.html">KAIF</a>
+        <a href="keheilan-index.html">Direct Indexing</a>
+        <a href="keheilan-sukuk.html">Sukuk</a>
+      </div>
+    </div>
+    <a href="keheilan-vc.html">Venture Capital</a>
+    <a href="keheilan-about.html">About Keheilan</a>
+  </div>
+  <a href="keheilan-about.html" class="nav-cta">Schedule a Call</a>
+  <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mobNav">
+  <a href="index.html">Home</a>
+  <div class="mob-strategy">
+    <button class="mob-strategy-btn">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <div class="mob-strategy-items">
+      <a href="keheilan-kaif.html">KAIF</a>
+      <a href="keheilan-index.html">Direct Indexing</a>
+      <a href="keheilan-sukuk.html">Sukuk</a>
+    </div>
+  </div>
+  <a href="keheilan-vc.html">Venture Capital</a>
+  <a href="keheilan-about.html">About Keheilan</a>
+  <a href="keheilan-about.html" class="mob-cta">Schedule a Call</a>
+</div>
+
+<div class="pr-hero">
+  <div class="pr-hero-inner">
+    <div class="pr-tag">Press Release · Venture Capital</div>
+    <div class="pr-meta">March 2026 · Riyadh, Saudi Arabia</div>
+    <h1>Rimal Semiconductors Secures Strategic Investment from Keheilan Asset Management</h1>
+    <p class="pr-sub">From Sand to Silicon: Rimal Semiconductors and Keheilan Unite to Build Saudi Arabia's Semiconductor Industry</p>
+  </div>
+  <div class="pr-photo-wrap" style="max-width:820px;margin:32px auto 0;padding:0 40px;">
+    <img src="rimal-news.jpg" alt="Strategic investment signing at Al Diriyah — Dr. Ahmed Abdelhamid with Rimal Semiconductors founders" class="pr-photo">
+  </div>
+</div>
+
+<div class="pr-body">
+  <p><strong>Riyadh, Saudi Arabia — March 2026.</strong> Keheilan Asset Management is pleased to announce a strategic investment in Rimal Semiconductors, a pioneering Saudi company dedicated to building a domestic semiconductor ecosystem in the Kingdom of Saudi Arabia. The partnership was formalized at Al Diriyah — a location steeped in historical significance — symbolising the deep roots from which this venture grows and the long-term vision it is built to serve.</p>
+
+  <p>The signing ceremony brought together Dr. Ahmed Abdelhamid, CEO and Founder of Keheilan Asset Management, and the founding team of Rimal Semiconductors, marking a meaningful milestone in the development of Saudi Arabia's emerging deep technology landscape.</p>
+
+  <h2>About Rimal Semiconductors</h2>
+  <p>Rimal Semiconductors is a Saudi-founded company with a singular mission: to build a world-class semiconductor industry within the Kingdom. The name "Rimal" — meaning "sands" in Arabic — reflects both the nation's heritage and the raw material at the heart of semiconductor manufacturing: silicon, derived from sand.</p>
+
+  <p>Rimal was founded on the conviction that Saudi Arabia possesses the talent, capital, and strategic alignment to develop sovereign semiconductor capabilities — reducing dependency on foreign technology supply chains while positioning the Kingdom as a contributor to the global technology stack. The company is developing capabilities across chip design, fabrication process knowledge, and semiconductor ecosystem development, with a focus on applications relevant to Vision 2030 priorities including smart infrastructure, energy, and defense technology.</p>
+
+  <h2>Strategic Rationale</h2>
+  <p>For Keheilan Asset Management, this investment reflects our conviction that deep technology ventures in the MENA region represent a generational opportunity. Semiconductor sovereignty is increasingly recognised as a national security and economic priority across the world's leading economies. Saudi Arabia, with its significant capital base, growing engineering talent pool, and clear government commitment to technology localisation, is uniquely positioned to build meaningful capabilities in this space.</p>
+
+  <blockquote>
+    <p>"We believe the next chapter of Saudi Arabia's economic transformation will be written in silicon. Rimal Semiconductors represents exactly the kind of bold, long-horizon venture that Keheilan was built to support. We are proud to stand with the Rimal team at the beginning of what we believe will be a defining journey."</p>
+    <p style="margin-top:12px;font-size:0.82rem;color:var(--ink30);font-style:normal;">— Dr. Ahmed Abdelhamid, CEO &amp; Founder, Keheilan Asset Management</p>
+  </blockquote>
+
+  <h2>Vision 2030 Alignment</h2>
+  <p>Saudi Arabia's Vision 2030 program has identified technological self-sufficiency as a core pillar of economic diversification. Semiconductors sit at the intersection of every major technology vertical the Kingdom is investing in — artificial intelligence, smart cities, renewable energy infrastructure, and defense modernisation. Rimal Semiconductors is building for this convergence.</p>
+
+  <p>The investment by Keheilan is structured to support Rimal's early-stage development including talent acquisition, R&amp;D infrastructure, and strategic partnerships with global semiconductor research institutions.</p>
+
+  <div class="pr-divider"></div>
+
+  <h2>About Keheilan Asset Management</h2>
+  <p>Keheilan Asset Management is a Netherlands-registered investment firm operating across two lines of business: institutional-grade Shariah-compliant asset management and deep technology venture capital. The firm manages capital for eligible investors globally, with an active investment and advisory presence across the Middle East, Europe, and Africa.</p>
+
+  <p>For investment inquiries: <a href="mailto:invest@keheilan.com" style="color:var(--accent);text-decoration:none;">invest@keheilan.com</a></p>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><img src="logo.png" alt="Keheilan" style="height:32px;width:auto;display:block;filter:brightness(0) invert(1);"></a>
+        <p class="footer-about">Keheilan Asset Management is a Netherlands-registered asset manager offering Shariah-compliant public equity and fixed income strategies to eligible investors globally. We combine disciplined quantitative methods with ethical investment principles to deliver risk-adjusted returns.</p>
+      </div>
+      <div class="footer-links-wrap">
+        <div class="footer-col">
+          <div class="footer-col-label">Strategies</div>
+          <a href="keheilan-kaif.html">KAIF</a>
+          <a href="keheilan-sukuk.html">Sukuk</a>
+          <a href="keheilan-index.html">Direct Indexing</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label">Company</div>
+          <a href="keheilan-about.html">About</a>
+          <a href="keheilan-vc.html">Ventures</a>
+          <a href="mailto:invest@keheilan.com">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <div class="footer-disc-label">Important Disclosures &amp; Risk Factors</div>
+      <div class="footer-disc-body">
+        <p><strong>Forward-Looking Statements.</strong> This website contains forward-looking statements, including projected returns, target performance figures, and simulated results. Past performance and simulated results are not indicative of future returns. Actual results may differ materially.</p>
+        <p><strong>Simulated Performance.</strong> Return figures labeled "simulated" or "backtested" represent hypothetical performance generated by applying a current strategy to historical data. They have not been audited or verified by an independent third party.</p>
+        <p><strong>Principal Risk Factors.</strong> Investing involves risk of loss, including equity market risk, emerging markets risk, concentration risk, and Shariah-compliant investing risk (smaller eligible universe may limit diversification). ETF strategies are also subject to ETF structure risk.</p>
+        <p><strong>Fund Manager Discretion.</strong> Keheilan retains discretion over portfolio construction and strategy descriptions may be updated without prior notice.</p>
+        <p>This website does not constitute an offer to sell or a solicitation to buy any security. Investment is available only to eligible investors through the firm's formal onboarding process.</p>
+        <div class="footer-disc-divider"></div>
+        <div class="footer-disc-label">SFDR Disclosure — Article 8 Classification</div>
+        <p>Keheilan Asset Management is registered in the Netherlands and subject to SFDR (EU) 2019/2088. All strategies are classified as Article 8 — they promote social and ethical characteristics by constructing portfolios within a Shariah-compliant investment universe (excluding interest-bearing instruments, alcohol, tobacco, weapons, and gambling). This is a structural feature of instrument selection, not a post-hoc screen. Keheilan does not commit to a minimum proportion of EU Taxonomy-aligned investments and does not represent its strategies as "sustainable investments" under Article 2(17) of SFDR. Principal adverse impacts (PAIs) are not currently considered at the entity level under Article 4. For more information: <a href="mailto:invest@keheilan.com">invest@keheilan.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Keheilan Asset Management B.V. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<script>
+window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=scrollY>20?'rgba(255,255,255,1)':'rgba(255,255,255,0.98)';},{passive:true});
+const hbg=document.getElementById('hamburger');const mobNav=document.getElementById('mobNav');hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mobNav.classList.toggle('open');});const dd=document.querySelector('.nav-dropdown');if(dd){dd.querySelector('.nav-dropdown-btn').addEventListener('click',e=>{e.stopPropagation();dd.classList.toggle('open');});document.addEventListener('click',()=>dd.classList.remove('open'));}const ms=document.querySelector('.mob-strategy');if(ms){ms.querySelector('.mob-strategy-btn').addEventListener('click',()=>ms.classList.toggle('open'));}mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mobNav.classList.remove('open');}));
+</script>
+</body>
+</html>

@@ -77,6 +77,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .p-spsk .port-ticker{color:var(--ink30);}
 .port-name{font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:6px;line-height:1.2;}
 .port-benchmark{font-size:0.75rem;color:var(--ink30);margin-bottom:20px;}
+.port-funds{font-size:0.65rem;letter-spacing:0.08em;color:var(--ink30);margin-bottom:10px;}
 .port-divider{height:1px;background:var(--line);margin-bottom:20px;}
 .port-features{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
 .port-feature{font-size:0.8rem;color:var(--ink60);display:flex;align-items:center;gap:6px;}
@@ -125,23 +126,25 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .cta-banner h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:400;color:#fff;margin-bottom:12px;position:relative;}
 .cta-banner p{font-size:0.9375rem;color:rgba(255,255,255,0.55);margin-bottom:32px;position:relative;}
 .cta-banner a{display:inline-flex;align-items:center;gap:10px;font-size:0.82rem;font-weight:500;color:#141414;background:var(--peach);padding:14px 30px;border-radius:var(--r-pill);text-decoration:none;position:relative;transition:all 0.2s;}
-footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.08);}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.footer-logo{font-family:var(--serif);font-size:1rem;color:#fff;text-decoration:none;}
-.footer-logo sup{font-family:var(--sans);font-size:0.4rem;font-weight:600;color:var(--aqua);vertical-align:super;}
-.footer-links{display:flex;gap:24px;list-style:none;}
-.footer-links a{font-size:0.75rem;color:rgba(255,255,255,0.35);text-decoration:none;}
-.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.18);}
+footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
+.footer-inner{max-width:1100px;margin:0 auto;}
+.footer-top{display:grid;grid-template-columns:1fr auto;gap:48px;margin-bottom:40px;}
+.footer-brand{max-width:400px;}
+.footer-about{font-size:0.75rem;line-height:1.75;color:rgba(255,255,255,0.4);margin-top:12px;}
+.footer-links-wrap{display:flex;gap:48px;}
+.footer-col{display:flex;flex-direction:column;gap:10px;}
+.footer-col-label{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:4px;}
+.footer-col a{font-size:0.8rem;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-disclaimer{border-top:1px solid rgba(255,255,255,0.08);padding-top:28px;margin-bottom:24px;}
+.footer-disc-label{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:10px;margin-top:16px;}
+.footer-disc-label:first-child{margin-top:0;}
+.footer-disc-body p{font-size:0.68rem;color:rgba(255,255,255,0.3);line-height:1.75;margin-bottom:8px;}
+.footer-disc-body strong{color:rgba(255,255,255,0.45);}
+.footer-disc-body a{color:rgba(255,255,255,0.45);text-decoration:none;}
+.footer-disc-divider{height:1px;background:rgba(255,255,255,0.08);margin:16px 0 14px;}
+.footer-bottom{font-size:0.68rem;color:rgba(255,255,255,0.2);border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
-.disclaimer{padding:48px 40px;background:#f4f4f4;border-top:1px solid var(--line);}
-.disclaimer-inner{max-width:900px;margin:0 auto;}
-.disclaimer-label{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink30);margin-bottom:14px;}
-.disclaimer-body p,.disclaimer-body ul{font-size:0.72rem;color:var(--ink60);line-height:1.75;margin-bottom:10px;}
-.disclaimer-body ul{padding-left:20px;}
-.disclaimer-body li{margin-bottom:6px;}
-.disclaimer-body strong{color:var(--ink);}
-.disclaimer-body a{color:var(--accent);text-decoration:none;}
-.disclaimer-divider{height:1px;background:var(--line);margin:20px 0 18px;}
 </style>
 </head>
 <body>
@@ -150,7 +153,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="nav-center">
     <a href="index.html">Home</a>
     <div class="nav-dropdown">
-      <button class="nav-dropdown-btn active">Strategy <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="nav-dropdown-btn active">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
         <a href="keheilan-kaif.html">KAIF</a>
         <a href="keheilan-index.html" class="active">Direct Indexing</a>
@@ -166,7 +169,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
 <div class="mob-nav" id="mobNav">
   <a href="index.html">Home</a>
   <div class="mob-strategy">
-    <button class="mob-strategy-btn active">Strategy <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <button class="mob-strategy-btn active">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="mob-strategy-items">
       <a href="keheilan-kaif.html">KAIF</a>
       <a href="keheilan-index.html" class="active">Direct Indexing</a>
@@ -216,7 +219,7 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
     <div class="rv">
       <div class="tag-pill">About Direct Indexing</div>
       <h2>Your risk level. World-class benchmarks. <em>Nothing else to manage.</em></h2>
-      <p>Four Shariah-compliant portfolios matched to risk appetite — from capital-stable Sukuk indexing to aggressive S&P 500 Shariah exposure. Each is professionally constructed, continuously rebalanced, and fully managed by Keheilan.</p>
+      <p>Four Shariah-compliant portfolios matched to risk appetite, each investing across all four Saturna Sustainable funds — SPSK, SPRE, SPWO, and SPUS — weighted according to the portfolio's risk profile. Each is professionally constructed, continuously rebalanced, and fully managed by Keheilan.</p>
       <p>Choose Conservative, Balanced, Growth, or Aggressive Growth. We handle construction, rebalancing, compliance monitoring, and reporting. You own the outcome.</p>
     </div>
     <div class="overview-stats rv d1">
@@ -236,64 +239,60 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   <div class="section-hd rv">
     <div class="tag-pill">The Four Portfolios</div>
     <h2>Choose your risk profile. We track the benchmark.</h2>
-    <p>Each portfolio is benchmarked to a leading Shariah-compliant global index, professionally managed to minimize tracking error and maximize compliance.</p>
+    <p>Each portfolio invests across all four Saturna Sustainable funds (SPSK, SPRE, SPWO, SPUS), weighted according to its risk profile. Professionally managed with Shariah compliance throughout.</p>
   </div>
   <div class="portfolios-grid">
     <div class="port-card p-spsk rv">
       <div class="port-bar"></div>
-      <div class="port-ticker">SPSK</div>
       <div class="port-name">Conservative</div>
-      <div style="font-size:0.78rem;color:var(--ink60);margin-bottom:6px;">Global Islamic Sukuk Bonds</div>
-      <div class="port-benchmark">Dow Jones Global Sukuk Index</div>
+      <div class="port-funds">SPSK · SPRE · SPWO · SPUS</div>
+      <div class="port-benchmark">Higher sukuk weighting</div>
       <div class="port-divider"></div>
       <div class="port-features">
         <div class="port-feature">Capital stability priority</div>
-        <div class="port-feature">Fixed income instruments</div>
+        <div class="port-feature">Sukuk-heavy allocation</div>
         <div class="port-feature">Lowest volatility profile</div>
-        <div class="port-feature">Global Sukuk universe</div>
+        <div class="port-feature">Income-focused mix</div>
       </div>
       <span class="port-risk risk-low">Low Risk</span>
     </div>
     <div class="port-card p-spre rv d1">
       <div class="port-bar"></div>
-      <div class="port-ticker">SPRE</div>
       <div class="port-name">Balanced</div>
-      <div style="font-size:0.78rem;color:var(--ink60);margin-bottom:6px;">Global Shariah Real Estate</div>
-      <div class="port-benchmark">S&amp;P Global REIT Shariah</div>
+      <div class="port-funds">SPSK · SPRE · SPWO · SPUS</div>
+      <div class="port-benchmark">Balanced across all four</div>
       <div class="port-divider"></div>
       <div class="port-features">
-        <div class="port-feature">Real estate exposure</div>
+        <div class="port-feature">Equal-weight orientation</div>
         <div class="port-feature">Income + growth balance</div>
-        <div class="port-feature">Global REIT diversification</div>
+        <div class="port-feature">Global diversification</div>
         <div class="port-feature">Moderate volatility</div>
       </div>
       <span class="port-risk risk-med">Moderate Risk</span>
     </div>
     <div class="port-card p-spwo rv d2">
       <div class="port-bar"></div>
-      <div class="port-ticker">SPWO</div>
       <div class="port-name">Growth</div>
-      <div style="font-size:0.78rem;color:var(--ink60);margin-bottom:6px;">Global Shariah Equities</div>
-      <div class="port-benchmark">MSCI World Shariah Index</div>
+      <div class="port-funds">SPSK · SPRE · SPWO · SPUS</div>
+      <div class="port-benchmark">Higher equity weighting</div>
       <div class="port-divider"></div>
       <div class="port-features">
-        <div class="port-feature">Global equity exposure</div>
-        <div class="port-feature">Developed markets only</div>
-        <div class="port-feature">Long-term appreciation focus</div>
+        <div class="port-feature">Global equity tilt</div>
+        <div class="port-feature">Developed markets focus</div>
+        <div class="port-feature">Long-term appreciation</div>
         <div class="port-feature">Higher volatility, higher return potential</div>
       </div>
       <span class="port-risk risk-high">Growth Risk</span>
     </div>
     <div class="port-card p-spus rv d3">
       <div class="port-bar"></div>
-      <div class="port-ticker">SPUS</div>
       <div class="port-name">Aggressive Growth</div>
-      <div style="font-size:0.78rem;color:var(--ink60);margin-bottom:6px;">US Shariah Equities</div>
-      <div class="port-benchmark">S&amp;P 500 Shariah Index</div>
+      <div class="port-funds">SPSK · SPRE · SPWO · SPUS</div>
+      <div class="port-benchmark">Maximum equity exposure</div>
       <div class="port-divider"></div>
       <div class="port-features">
-        <div class="port-feature">US large-cap Shariah equities</div>
-        <div class="port-feature">Maximum equity concentration</div>
+        <div class="port-feature">Maximum equity allocation</div>
+        <div class="port-feature">US + global equity tilt</div>
         <div class="port-feature">Long-horizon investors only</div>
         <div class="port-feature">Highest return potential</div>
       </div>
@@ -372,43 +371,44 @@ footer{padding:40px;background:#071e1a;border-top:1px solid rgba(255,255,255,0.0
   </a>
 </div>
 
-<section class="disclaimer">
-  <div class="disclaimer-inner">
-    <div class="disclaimer-label">Important Disclosures &amp; Risk Factors</div>
-    <div class="disclaimer-body">
-      <p><strong>Forward-Looking Statements.</strong> This website contains forward-looking statements, including projected returns, target performance figures, and simulated results. These statements are based on assumptions and models that may not reflect actual market outcomes. Past performance and simulated results are not indicative of future returns. Actual results may differ materially.</p>
-      <p><strong>Simulated Performance.</strong> Any return figures labeled "simulated" or "backtested" represent hypothetical performance generated by applying a current investment strategy to historical market data. Simulated results do not represent actual trading and have inherent limitations including the benefit of hindsight. They have not been audited or verified by an independent third party.</p>
-      <p><strong>ETF Risks.</strong> Strategies that invest in exchange-traded funds (ETFs) are subject to the risks of the underlying securities held by those ETFs. ETF shares may trade at a premium or discount to net asset value. Brokerage commissions and fund expenses apply and will reduce returns.</p>
-      <p><strong>Fund Manager Discretion.</strong> Keheilan Asset Management retains discretion over portfolio construction, instrument selection, rebalancing, and exit decisions. Strategy descriptions represent current methodology and may be updated at manager discretion without prior notice to investors.</p>
-      <p><strong>Principal Risk Factors.</strong> Investing involves risk of loss. The following risks may apply depending on the strategy:</p>
-      <ul>
-        <li><strong>Emerging Markets Risk:</strong> Investments in emerging market securities involve greater risk than developed market investments, including political instability, currency risk, limited liquidity, and less developed regulatory frameworks.</li>
-        <li><strong>Non-Diversification Risk:</strong> A concentrated portfolio may be subject to greater volatility than a broadly diversified portfolio. Loss of any single position may have a material adverse effect on portfolio returns.</li>
-        <li><strong>Equity Market Risk:</strong> Equity securities are subject to price volatility driven by macroeconomic conditions, industry factors, and issuer-specific events. There is no guarantee that equity investments will appreciate in value.</li>
-        <li><strong>Concentration Risk:</strong> Portfolios focused on particular sectors, geographies, or asset classes may experience greater volatility than more diversified strategies.</li>
-        <li><strong>Sharia-Compliant Investing Risk:</strong> Strategies that restrict investments to Shariah-compliant securities may underperform broader market indices or conventional strategies. The universe of eligible securities is smaller, which may limit diversification and liquidity.</li>
-        <li><strong>ETF Structure Risk:</strong> ETF liquidity depends on the liquidity of underlying holdings. In stressed market conditions, ETF bid-ask spreads may widen and execution at stated prices may not be possible.</li>
-      </ul>
-      <p>This website does not constitute an offer to sell or a solicitation of an offer to buy any security. Investment is available only to eligible investors through the firm's formal onboarding process.</p>
-      <div class="disclaimer-divider"></div>
-      <div class="disclaimer-label" style="margin-top:0;">SFDR Disclosure — Article 8 Classification</div>
-      <p>Keheilan Asset Management is registered and headquartered in the Netherlands and is subject to the EU Sustainable Finance Disclosure Regulation (SFDR) (EU) 2019/2088.</p>
-      <p><strong>Article 8 Classification.</strong> Keheilan's asset management strategies promote social and ethical characteristics within the meaning of Article 8 of SFDR. All strategies are constructed within a Shariah-compliant investment universe — an approach that promotes ethical principles including the exclusion of interest-bearing instruments, alcohol, tobacco, weapons, and gambling-related activities.</p>
-      <p><strong>How Social Characteristics Are Promoted.</strong> The Shariah-compliant nature of the investment universe is structural: instruments are selected from within a predefined universe of Shariah-compliant securities. This is not a post-hoc screen — it is the foundation of instrument selection across all strategies.</p>
-      <p><strong>No Minimum Sustainable Investment.</strong> Keheilan does not commit to a minimum proportion of investments aligned with the EU Taxonomy or with the definition of "sustainable investments" under Article 2(17) of SFDR. The firm promotes social and ethical characteristics through Shariah-compliance but does not represent its strategies as "sustainable investments" in the regulatory sense.</p>
-      <p><strong>Principal Adverse Impacts.</strong> Keheilan does not currently consider principal adverse impacts (PAIs) on sustainability factors at the entity level, as defined under Article 4 of SFDR. This position will be reviewed as the firm's AUM and regulatory obligations evolve.</p>
-      <p>For more information: <a href="mailto:invest@keheilan.com">invest@keheilan.com</a></p>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="footer-inner">
-    <a href="/" class="footer-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:38px;width:auto;display:block;"></a>
-    <ul class="footer-links">
-      <li><a href="keheilan-kaif.html">KAIF</a></li><li><a href="keheilan-sukuk.html">Sukuk</a></li><li><a href="keheilan-index.html">Direct Indexing</a></li><li><a href="keheilan-vc.html">Venture Capital</a></li><li><a href="keheilan-about.html">About Keheilan</a></li><li><a href="keheilan-about.html#contact">Contact</a></li>
-    </ul>
-    <span class="footer-copy">&copy; 2025 Keheilan Asset Management</span>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><img src="logo.png" alt="Keheilan" style="height:32px;width:auto;display:block;filter:brightness(0) invert(1);"></a>
+        <p class="footer-about">Keheilan Asset Management is a Netherlands-registered asset manager offering Shariah-compliant public equity and fixed income strategies to eligible investors globally. We combine disciplined quantitative methods with ethical investment principles to deliver risk-adjusted returns.</p>
+      </div>
+      <div class="footer-links-wrap">
+        <div class="footer-col">
+          <div class="footer-col-label">Strategies</div>
+          <a href="keheilan-kaif.html">KAIF</a>
+          <a href="keheilan-sukuk.html">Sukuk</a>
+          <a href="keheilan-index.html">Direct Indexing</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-label">Company</div>
+          <a href="keheilan-about.html">About</a>
+          <a href="keheilan-vc.html">Ventures</a>
+          <a href="mailto:invest@keheilan.com">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <div class="footer-disc-label">Important Disclosures &amp; Risk Factors</div>
+      <div class="footer-disc-body">
+        <p><strong>Forward-Looking Statements.</strong> This website contains forward-looking statements, including projected returns, target performance figures, and simulated results. Past performance and simulated results are not indicative of future returns. Actual results may differ materially.</p>
+        <p><strong>Simulated Performance.</strong> Return figures labeled "simulated" or "backtested" represent hypothetical performance generated by applying a current strategy to historical data. They have not been audited or verified by an independent third party.</p>
+        <p><strong>Principal Risk Factors.</strong> Investing involves risk of loss, including equity market risk, emerging markets risk, concentration risk, and Shariah-compliant investing risk (smaller eligible universe may limit diversification). ETF strategies are also subject to ETF structure risk.</p>
+        <p><strong>Fund Manager Discretion.</strong> Keheilan retains discretion over portfolio construction and strategy descriptions may be updated without prior notice.</p>
+        <p>This website does not constitute an offer to sell or a solicitation to buy any security. Investment is available only to eligible investors through the firm's formal onboarding process.</p>
+        <div class="footer-disc-divider"></div>
+        <div class="footer-disc-label">SFDR Disclosure — Article 8 Classification</div>
+        <p>Keheilan Asset Management is registered in the Netherlands and subject to SFDR (EU) 2019/2088. All strategies are classified as Article 8 — they promote social and ethical characteristics by constructing portfolios within a Shariah-compliant investment universe (excluding interest-bearing instruments, alcohol, tobacco, weapons, and gambling). This is a structural feature of instrument selection, not a post-hoc screen. Keheilan does not commit to a minimum proportion of EU Taxonomy-aligned investments and does not represent its strategies as "sustainable investments" under Article 2(17) of SFDR. Principal adverse impacts (PAIs) are not currently considered at the entity level under Article 4. For more information: <a href="mailto:invest@keheilan.com">invest@keheilan.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Keheilan Asset Management B.V. All rights reserved.</span>
+    </div>
   </div>
 </footer>
 <script>
