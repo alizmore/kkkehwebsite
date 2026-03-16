@@ -103,7 +103,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 /* FEES */
 .fees{padding:100px 40px;background:var(--bg2);}
 .fees-inner{max-width:900px;margin:0 auto;}
-.fees-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px;}
+.fees-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px;}
+@media(max-width:900px){.fees-row{grid-template-columns:1fr 1fr;}}
 .fee-block{background:var(--bg);border-radius:var(--r);padding:36px;border:1px solid var(--line);text-align:center;}
 .fee-block.dark{background:var(--dark);border-color:var(--dark);}
 .fee-big{font-family:var(--serif);font-size:3.2rem;font-weight:400;color:var(--accent);line-height:1;margin-bottom:6px;}
@@ -150,15 +151,15 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
   <a href="/" class="nav-logo"><img src="logo.png" alt="Keheilan Asset Management" style="height:44px;width:auto;display:block;"></a>
   <div class="nav-center">
     <a href="index.html">Home</a>
+    <a href="keheilan-vc.html">Venture Capital</a>
     <div class="nav-dropdown">
       <button class="nav-dropdown-btn active">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <div class="nav-dropdown-menu">
-        <a href="keheilan-kaif.html" class="active">KAIF</a>
+        <a href="keheilan-kaif.html" class="active">AI Managed Funds</a>
+        <a href="keheilan-sukuk.html">Fixed Income</a>
         <a href="keheilan-index.html">Direct Indexing</a>
-        <a href="keheilan-sukuk.html">Sukuk</a>
       </div>
     </div>
-    <a href="keheilan-vc.html">Venture Capital</a>
     <a href="keheilan-about.html">About Keheilan</a>
   </div>
   <a href="keheilan-about.html" class="nav-cta">Schedule a Call</a>
@@ -166,15 +167,15 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
 </nav>
 <div class="mob-nav" id="mobNav">
   <a href="index.html">Home</a>
+  <a href="keheilan-vc.html">Venture Capital</a>
   <div class="mob-strategy">
     <button class="mob-strategy-btn active">Public Equities <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M2 3.5l3.5 3.5 3.5-3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
     <div class="mob-strategy-items">
-      <a href="keheilan-kaif.html" class="active">KAIF</a>
+      <a href="keheilan-kaif.html" class="active">AI Managed Funds</a>
+      <a href="keheilan-sukuk.html">Fixed Income</a>
       <a href="keheilan-index.html">Direct Indexing</a>
-      <a href="keheilan-sukuk.html">Sukuk</a>
     </div>
   </div>
-  <a href="keheilan-vc.html">Venture Capital</a>
   <a href="keheilan-about.html">About Keheilan</a>
   <a href="keheilan-about.html" class="mob-cta">Schedule a Call</a>
 </div>
@@ -183,24 +184,23 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
   <div class="hero-pattern"></div>
   <div class="hero-glow"></div>
   <div class="hero-content">
-    <div class="hero-tag">KAIF · Keheilan AI Index Fund</div>
-    <h1>Sourced from the World's Best Assets, Built for Shariah, <span style="color:#00917C">Managed by AI.</span></h1>
-    <p class="hero-sub">A multi-asset fund sourcing top-performing Shariah-compliant assets from across global markets, reweighted continuously by AI, built entirely within a Shariah-compliant investment universe.</p>
+    <div class="hero-tag">KAIF · Keheilan AI-Managed Private-Index Fund</div>
+    <h1>Global Equities, Shariah-Compliant, <span style="color:#00917C">Managed by AI.</span></h1>
+    <p class="hero-sub">KAIF draws from top-performing holdings in the global stock exchange. AI filters the assets, decides the weights, and decides the optimum portfolio construction to maximize risk-adjusted returns.</p>
     <div class="hero-pills">
       <span class="hero-pill">Shariah-Compliant</span>
-      <span class="hero-pill">Multi-Asset</span>
-      <span class="hero-pill">AI-Rebalanced</span>
-      <span class="hero-pill">Technology Focus</span>
+      <span class="hero-pill">AI Portfolio Construction</span>
+      <span class="hero-pill">Global Equities</span>
       <span class="hero-pill">Active Strategy</span>
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="hero-stat-num">+40%</div>
-        <div class="hero-stat-label">Simulated Return · April '25–Jan '26</div>
+        <div class="hero-stat-label">Live Return</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">3</div>
-        <div class="hero-stat-label">Asset Classes</div>
+        <div class="hero-stat-num">Live</div>
+        <div class="hero-stat-label">AI-Managed</div>
       </div>
     </div>
   </div>
@@ -211,17 +211,17 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
     <div class="rv">
       <div class="tag-pill">About KAIF</div>
       <h2>What KAIF is, exactly.</h2>
-      <p>KAIF sources its universe from top-performing Shariah-compliant assets identified from across global markets. What the world's leading investment managers have identified as high-quality, KAIF inherits — and AI takes it further.</p>
-      <p>What AI does is go further. Algorithmic models then evaluate each holding across market capitalization and financial metrics, reweighting positions to maximize risk-adjusted performance. Every asset is selected from within a Shariah-compliant investment universe. The result is a portfolio that combines institutional-grade research, AI-driven optimization, and faith-based ethics, across equities, gold, and Sukuk.</p>
+      <p>KAIF draws from top-performing holdings in the global stock exchange. AI identifies which assets to select, how to weight them, and how to construct the portfolio to maximize risk-adjusted returns — all within a Shariah-compliant investment universe.</p>
+      <p>The process is systematic: AI screens global equities for quality and performance, assigns weights based on financial metrics and market conditions, and builds the portfolio from the ground up. No ETF wrappers. Direct exposure to the global stock market, governed by Shariah throughout.</p>
     </div>
     <div class="overview-right rv d1">
       <div class="ov-card">
         <div class="ov-card-num">+40<em>%</em></div>
-        <div class="ov-card-label">Simulated return · April 2025 – January 2026 (9 months)</div>
+        <div class="ov-card-label">Live return · AI-Managed</div>
       </div>
       <div class="ov-card">
         <div class="ov-card-num">3</div>
-        <div class="ov-card-label">Asset classes: Equities · Gold · Sukuk</div>
+        <div class="ov-card-label">Global Shariah-compliant equities</div>
       </div>
     </div>
   </div>
@@ -255,8 +255,8 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
     <div class="hiw-card rv d1">
       <div class="hiw-num">04</div>
       <div class="hiw-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 1 0 16 0 8 8 0 0 0-16 0z" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-      <div class="hiw-title">Auto-Rebalancing Aligned to Markets</div>
-      <p class="hiw-body">KAIF monitors market conditions continuously and rebalances allocations automatically. No manual intervention required. No emotional overrides. Just disciplined, systematic execution.</p>
+      <div class="hiw-title">AI Portfolio Construction</div>
+      <p class="hiw-body">AI constructs the full portfolio — deciding the composition, the weights, and the structure. No manual intervention. No emotional overrides. Systematic, disciplined execution at every step.</p>
     </div>
   </div>
 </section>
@@ -264,29 +264,28 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
 <section class="perf">
   <div class="perf-inner">
     <div class="perf-hd rv">
-      <h2>Simulated Performance</h2>
-      <p>KAIF backtested over a 9-month period from April 2025 to January 2026, demonstrating the AI reweighting model's capacity for benchmark outperformance.</p>
+      <h2>Live Performance</h2>
+      <p>KAIF is live, drawing directly from global stock exchanges. The AI selects, weights, and constructs the portfolio in real time within a Shariah-compliant universe.</p>
     </div>
     <div class="perf-card rv d1">
       <div class="perf-big">
         <div class="perf-glow"></div>
-        <div class="perf-eyebrow">Simulated Return</div>
+        <div class="perf-eyebrow">Live Return</div>
         <div class="perf-number">+40%</div>
-        <div class="perf-period">April 2025 to January 2026 · 9 Months</div>
-        <div class="perf-disclaimer">Simulated performance is not a guarantee of future results. Past or simulated results do not predict future performance. This is for illustrative purposes only.</div>
+        <div class="perf-period">Live · Shariah-Compliant Global Equities</div>
       </div>
       <div class="perf-points">
         <div class="perf-point">
           <div class="perf-point-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 11l3-4 3 3 3-5 3 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <div class="perf-point-text"><strong>Multi-Asset Allocation</strong>Positions held across equities, gold, and Sukuk — dynamically weighted by AI.</div>
+          <div class="perf-point-text"><strong>AI Selects</strong>AI identifies top-performing Shariah-compliant global equities sourced directly from global stock exchanges.</div>
         </div>
         <div class="perf-point">
           <div class="perf-point-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="2"/><rect x="9" y="2" width="5" height="5" rx="1" stroke="currentColor" stroke-width="2"/><rect x="2" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="2"/><rect x="9" y="9" width="5" height="5" rx="1" stroke="currentColor" stroke-width="2"/></svg></div>
-          <div class="perf-point-text"><strong>Sourced from Global Markets</strong>Top-performing Shariah-compliant assets identified from across global markets, reweighted by AI for optimal risk-adjusted returns.</div>
+          <div class="perf-point-text"><strong>AI Weights</strong>AI decides the optimal weighting for each position based on quality metrics and market conditions.</div>
         </div>
         <div class="perf-point">
           <div class="perf-point-ico"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2L4 4v4c0 3 1.6 5.5 4 6.5C10.4 13.5 12 11 12 8V4L8 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/></svg></div>
-          <div class="perf-point-text"><strong>Full Shariah Compliance</strong>Every position selected within the Shariah-compliant universe and monitored continuously for compliance drift.</div>
+          <div class="perf-point-text"><strong>AI Constructs</strong>AI decides the optimum portfolio construction to maximize risk-adjusted returns, within a fully Shariah-compliant framework.</div>
         </div>
       </div>
     </div>
@@ -297,17 +296,31 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
   <div class="fees-inner">
     <div class="section-hd rv">
       <div class="tag-pill">Fee Structure</div>
-      <h2>Simple. Transparent. Aligned with you.</h2>
-      <p>Simple, transparent fee structure. No hidden charges.</p>
+      <h2>Transparent fees. Aligned with your returns.</h2>
+      <p>Four clearly defined fees. No hidden charges.</p>
     </div>
-    <div class="fees-row" style="grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto;">
+    <div class="fees-row">
       <div class="fee-block rv">
+        <div class="fee-label">Performance Fee</div>
+        <div class="fee-big">20%</div>
+        <div class="fee-context">Charged on positive returns above the high-water mark. Keheilan earns when you earn.</div>
+      </div>
+      <div class="fee-block dark rv d1">
+        <div class="fee-label">Management Fee</div>
+        <div class="fee-big">1%</div>
+        <div class="fee-context" style="color:rgba(255,255,255,0.2);">Annual charge on assets under management. Covers ongoing portfolio management and compliance.</div>
+      </div>
+      <div class="fee-block rv d2">
         <div class="fee-label">Entry Fee</div>
-        <div class="fee-big">0%</div>
-        <div class="fee-context">No subscription fee to invest.<br>Your capital goes to work immediately.</div>
+        <div class="fee-big">0.75%</div>
+        <div class="fee-context">One-time subscription fee charged at investment. Covers onboarding and account setup.</div>
+      </div>
+      <div class="fee-block rv d3">
+        <div class="fee-label">Exit Fee</div>
+        <div class="fee-big">2%</div>
+        <div class="fee-context">Charged on redemption. Structured to align with long-term investment horizons.</div>
       </div>
     </div>
-    <p class="rv d1" style="text-align:center;font-size:0.875rem;color:var(--ink60);margin-top:24px;line-height:1.7;">Minimum investment details available on request. Contact us to discuss onboarding.</p>
   </div>
 </section>
 
@@ -330,8 +343,8 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
       <div class="footer-links-wrap">
         <div class="footer-col">
           <div class="footer-col-label">Strategies</div>
-          <a href="keheilan-kaif.html">KAIF</a>
-          <a href="keheilan-sukuk.html">Sukuk</a>
+          <a href="keheilan-kaif.html">AI Managed Funds</a>
+          <a href="keheilan-sukuk.html">Fixed Income</a>
           <a href="keheilan-index.html">Direct Indexing</a>
         </div>
         <div class="footer-col">
