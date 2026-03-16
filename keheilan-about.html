@@ -110,26 +110,71 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:68px;d
 .step-body{font-size:0.875rem;color:var(--ink60);line-height:1.7;}
 @media(max-width:768px){.process-inner{grid-template-columns:1fr;gap:48px;}}
 /* CONTACT */
-.contact{padding:100px 40px;background:var(--bg);id:contact}
-.contact-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.contact-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.2;margin-bottom:16px;}
-.contact-left h2 em{font-style:italic;color:var(--accent);}
-.contact-left p{font-size:0.9375rem;color:var(--ink60);line-height:1.75;margin-bottom:32px;}
-.contact-details{display:flex;flex-direction:column;gap:16px;}
+.contact{padding:100px 40px;background:var(--bg);}
+.contact-inner{max-width:1060px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:start;}
+.contact-details{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;}
 .contact-item{display:flex;align-items:flex-start;gap:14px;}
 .contact-item-icon{width:38px;height:38px;border-radius:var(--r);background:var(--accent-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
-.contact-item-text strong{display:block;font-size:0.8rem;font-weight:600;color:var(--ink);margin-bottom:3px;}
+.contact-item-text strong{display:block;font-size:0.78rem;font-weight:600;color:var(--ink);margin-bottom:3px;}
 .contact-item-text span,.contact-item-text a{font-size:0.875rem;color:var(--ink60);text-decoration:none;line-height:1.6;}
 .contact-item-text a:hover{color:var(--accent);}
-.contact-form{background:var(--bg2);border-radius:var(--r);padding:40px;border:1px solid var(--line);}
-.form-group{margin-bottom:20px;}
-.form-group label{display:block;font-size:0.78rem;font-weight:600;color:var(--ink);margin-bottom:8px;letter-spacing:0.02em;}
-.form-group input,.form-group textarea,.form-group select{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;font-family:var(--sans);font-size:0.875rem;color:var(--ink);outline:none;transition:border-color 0.2s;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
-.form-group textarea{height:110px;resize:vertical;}
-.form-group select{appearance:none;cursor:pointer;}
-.form-submit{width:100%;background:var(--accent);color:#fff;border:none;border-radius:var(--r-pill);padding:14px 24px;font-family:var(--sans);font-size:0.875rem;font-weight:500;cursor:pointer;transition:background 0.2s;display:flex;align-items:center;justify-content:center;gap:10px;}
-.form-submit:hover{background:var(--accent2);}
+.offices-block{margin-top:28px;}
+.offices-label{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink30);margin-bottom:10px;}
+/* FIND US AT */
+.find-us-block{margin-bottom:28px;}
+.find-us-label{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink60);margin-bottom:14px;}
+.find-us-row{display:flex;flex-direction:column;gap:2px;margin-bottom:12px;}
+.fu-dept{font-size:0.72rem;font-weight:600;color:var(--ink30);}
+.find-us-row a{font-size:0.875rem;color:var(--accent2);text-decoration:none;}
+.find-us-row a:hover{color:var(--accent);}
+/* SOCIAL ICONS */
+.social-row{display:flex;gap:10px;margin-top:28px;}
+.social-ic{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent2);transition:all 0.2s;text-decoration:none;}
+.social-ic:hover{border-color:var(--accent);background:var(--accent-light);}
+.social-ic svg{width:16px;height:16px;fill:currentColor;}
+/* CONTACT FORM CARD */
+.contact-form{background:var(--bg2);border-radius:var(--r);padding:36px;border:1px solid var(--line);}
+/* ROLE TOGGLE */
+.role-toggle{display:flex;gap:4px;background:rgba(5,90,87,0.1);border-radius:var(--r-pill);padding:4px;margin-bottom:24px;}
+.role-btn{flex:1;font-family:var(--sans);font-size:0.8rem;font-weight:500;color:var(--ink60);background:transparent;border:none;padding:9px 18px;border-radius:var(--r-pill);cursor:pointer;transition:all 0.22s;text-align:center;}
+.role-btn.active{color:var(--accent2);background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.08);}
+.role-fields{display:none;}
+.role-fields.active{display:block;}
+/* FORM GROUPS */
+.fg{margin-bottom:18px;}
+.fg label{display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--ink60);margin-bottom:7px;}
+.fg input,.fg textarea{width:100%;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:12px 14px;font-family:var(--sans);font-size:0.875rem;color:var(--ink);outline:none;transition:border-color 0.2s;}
+.fg input:focus,.fg textarea:focus{border-color:var(--accent);}
+.fg textarea{min-height:88px;resize:vertical;line-height:1.55;}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--ink30);}
+.lbl-opt{font-size:0.7rem;color:var(--ink30);font-weight:400;text-transform:none;letter-spacing:0;}
+/* CHECKBOXES */
+.cb-row{display:flex;align-items:center;gap:10px;padding:9px 12px;border:1.5px solid var(--line);border-radius:var(--r);cursor:pointer;margin-bottom:10px;transition:all 0.18s;background:#fff;}
+.cb-row:hover,.cb-row.checked{border-color:var(--accent);background:rgba(0,145,124,0.03);}
+.cb-row input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer;flex-shrink:0;}
+.cb-row span{font-size:0.875rem;color:var(--ink);}
+/* FILE UPLOAD */
+.fu-area{border:1.5px dashed var(--line);border-radius:var(--r);padding:24px 16px;text-align:center;cursor:pointer;transition:all 0.2s;position:relative;background:#fff;}
+.fu-area:hover{border-color:var(--accent);}
+.fu-area.has-file{border-style:solid;border-color:var(--accent);}
+.fu-area input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;}
+.fu-text{font-size:0.82rem;color:var(--ink60);}
+.fu-text strong{color:var(--accent);font-weight:500;}
+.fu-meta{font-size:0.68rem;color:var(--ink30);margin-top:2px;}
+.fu-name{font-size:0.76rem;color:var(--accent);margin-top:5px;font-weight:500;}
+/* SUBMIT */
+.form-submit{width:100%;margin-top:6px;background:var(--accent);color:#fff;border:none;border-radius:var(--r-pill);padding:14px 24px;font-family:var(--sans);font-size:0.875rem;font-weight:500;cursor:pointer;transition:all 0.22s;display:flex;align-items:center;justify-content:center;gap:10px;}
+.form-submit:hover{background:var(--accent2);transform:translateY(-1px);}
+.form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+/* ERRORS + SUCCESS */
+.ferr{font-size:0.72rem;color:#c0392b;margin-top:5px;display:none;}
+.form-success-state{display:none;text-align:center;padding:24px 0 8px;}
+.fss-icon{width:52px;height:52px;border-radius:50%;background:rgba(0,145,124,0.1);border:2px solid rgba(0,145,124,0.2);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.fss-icon svg{width:22px;height:22px;stroke:var(--accent);}
+.fss-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:6px;}
+.fss-body{font-size:0.875rem;color:var(--ink60);line-height:1.6;}
+.fspin{width:14px;height:14px;border:2px solid rgba(255,255,255,0.3);border-top-color:#fff;border-radius:50%;animation:fspin 0.65s linear infinite;display:none;}
+@keyframes fspin{to{transform:rotate(360deg);}}
 @media(max-width:768px){.contact-inner{grid-template-columns:1fr;gap:48px;}}
 /* CTA BANNER */
 .cta-banner{padding:80px 40px;background:#071e1a;text-align:center;position:relative;overflow:hidden;}
@@ -190,7 +235,7 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
     </div>
   </div>
   <a href="keheilan-about.html" class="active">About Keheilan</a>
-  <a href="keheilan-about.html" class="mob-cta">Schedule a Call</a>
+  <a href="#contact" class="mob-cta">Schedule a Call</a>
 </div>
 
 <!-- HERO -->
@@ -238,9 +283,21 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
       </div>
       <div class="office-divider"></div>
       <div class="office-item">
+        <div class="office-region">Europe</div>
+        <div class="office-city">Belgium</div>
+        <div class="office-desc">European investor coverage and fund operations.</div>
+      </div>
+      <div class="office-divider"></div>
+      <div class="office-item">
         <div class="office-region">Middle East</div>
-        <div class="office-city">MENA Region</div>
-        <div class="office-desc">Saudi Arabia, UAE, and Egypt — venture activity and investor coverage.</div>
+        <div class="office-city">Saudi Arabia</div>
+        <div class="office-desc">GCC investor relations and regional partnerships.</div>
+      </div>
+      <div class="office-divider"></div>
+      <div class="office-item">
+        <div class="office-region">Africa</div>
+        <div class="office-city">Egypt</div>
+        <div class="office-desc">MENA venture activity and investor coverage.</div>
       </div>
     </div>
   </div>
@@ -349,67 +406,145 @@ footer{background:#071e1a;padding:56px 40px 32px;color:rgba(255,255,255,0.5);}
 <!-- CONTACT / SCHEDULE A CALL -->
 <section class="contact" id="contact">
   <div class="contact-inner">
+
+    <!-- LEFT: info -->
     <div class="rv">
-      <div class="tag-pill">Schedule a Call</div>
-      <h2>Ready to explore your <em>investment journey?</em></h2>
-      <p>Our team of experts is here to guide you through every step. Reach out and we'll be in touch within one business day.</p>
-      <div class="contact-details">
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4l6 5 6-5M2 4h12v9H2V4z" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <div class="contact-item-text"><strong>Email</strong><a href="mailto:info@keheilan.com">info@keheilan.com</a></div>
+      <div class="tag-pill">Get in Touch</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:400;color:var(--ink);line-height:1.2;margin:12px 0 16px;">Connect with us <em style="font-style:italic;color:var(--accent);">and get started.</em></h2>
+      <p style="font-size:0.9375rem;color:var(--ink60);line-height:1.75;margin-bottom:32px;">Whether you're allocating capital or building a company, we'll take the time to understand your situation before anything else. One call is all it takes to start.</p>
+      <div class="find-us-block">
+        <div class="find-us-label">Find us at</div>
+        <div class="find-us-row">
+          <span class="fu-dept">General Inquiries</span>
+          <a href="mailto:info@keheilan.com">info@keheilan.com</a>
         </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z" stroke="var(--accent)" stroke-width="1.5"/><circle cx="8" cy="6" r="1.5" stroke="var(--accent)" stroke-width="1.5"/></svg>
-          </div>
-          <div class="contact-item-text"><strong>Office</strong><span>Konnetlaantje 4, Rijsenhout<br>1435 HW, Netherlands</span></div>
+        <div class="find-us-row">
+          <span class="fu-dept">Startups</span>
+          <a href="mailto:startups@keheilan.com">startups@keheilan.com</a>
         </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="3" stroke="var(--accent)" stroke-width="1.5"/><path d="M5 8h6M8 5v6" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <div class="contact-item-text"><strong>LinkedIn</strong><a href="https://linkedin.com/company/keheilan" target="_blank">company/keheilan</a></div>
+        <div class="find-us-row">
+          <span class="fu-dept">Investments</span>
+          <a href="mailto:invest@keheilan.com">invest@keheilan.com</a>
+        </div>
+        <div class="find-us-row">
+          <span class="fu-dept">Public Relations</span>
+          <a href="mailto:pr@keheilan.com">pr@keheilan.com</a>
         </div>
       </div>
+      <div class="offices-block">
+        <div class="offices-label">Offices</div>
+        <p style="font-size:0.9rem;color:var(--ink60);line-height:1.8;margin-top:10px;">Egypt, Saudi Arabia, Netherlands, and Belgium.</p>
+      </div>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/company/keheilan/" target="_blank" class="social-ic" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/keheilan.am?igsh=NnNic3F2djlwNGZl" target="_blank" class="social-ic" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+      </div>
     </div>
+
+    <!-- RIGHT: embedded questionnaire -->
     <div class="contact-form rv d1">
-      <div class="form-group">
+
+      <!-- Form header -->
+      <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Schedule a Call</div>
+      <h3 style="font-family:var(--serif);font-size:clamp(1.5rem,3vw,1.9rem);font-weight:400;color:var(--ink);margin-bottom:6px;">Let's <em style="font-style:italic;color:var(--accent);">talk.</em></h3>
+      <p style="font-size:0.85rem;color:var(--ink60);line-height:1.65;margin-bottom:22px;">Tell us about yourself and we'll be in touch within one business day.</p>
+
+      <!-- Shared top fields + role toggle -->
+      <div class="fg">
         <label>Full Name</label>
-        <input type="text" placeholder="Your full name">
+        <input type="text" id="shared-name" placeholder="Your full name">
+        <div class="ferr" id="shared-name-err">Please enter your name.</div>
       </div>
-      <div class="form-group">
+      <div class="fg">
         <label>Email Address</label>
-        <input type="email" placeholder="you@example.com">
+        <input type="email" id="shared-email" placeholder="you@example.com">
+        <div class="ferr" id="shared-email-err">Please enter a valid email.</div>
       </div>
-      <div class="form-group">
-        <label>I'm interested in</label>
-        <select>
-          <option value="">Select a product</option>
-          <option>KAIF — AI Index Fund</option>
-          <option>Sukuk Portfolios</option>
-          <option>Direct Indexing</option>
-          <option>General Inquiry</option>
-        </select>
+
+      <!-- Role toggle -->
+      <div class="fg">
+        <label style="margin-bottom:8px;">I am a</label>
+        <div class="role-toggle" style="margin-bottom:0;">
+          <button class="role-btn active" onclick="switchRole('investor',this)">Investor</button>
+          <button class="role-btn" onclick="switchRole('founder',this)">Startup Founder</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us about your investment goals..."></textarea>
+
+      <!-- Investor fields -->
+      <div class="role-fields active" id="rf-investor">
+        <form id="abt-inv" novalidate onsubmit="submitAbtInv(event)">
+          <div class="fg">
+            <label>Product Interest <span class="lbl-opt">(select at least one)</span></label>
+            <label class="cb-row"><input type="checkbox" value="AI Managed Funds" onchange="cbToggle(this)"><span>AI Managed Funds</span></label>
+            <label class="cb-row"><input type="checkbox" value="Fixed Income" onchange="cbToggle(this)"><span>Fixed Income</span></label>
+            <label class="cb-row"><input type="checkbox" value="Direct Indexing" onchange="cbToggle(this)"><span>Direct Indexing</span></label>
+            <label class="cb-row"><input type="checkbox" value="Venture Capital" onchange="cbToggle(this)"><span>Venture Capital</span></label>
+            <div class="ferr" id="ai-int-err">Please select at least one product.</div>
+          </div>
+          <div class="fg">
+            <label>Message <span class="lbl-opt">(optional)</span></label>
+            <textarea id="ai-msg" placeholder="Briefly describe your investment objectives or what you'd like to discuss."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="ai-btn">
+            <span id="ai-btntxt">Get Started</span>
+            <div class="fspin" id="ai-spin"></div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" id="ai-arrow"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
       </div>
-      <button class="form-submit" onclick="window.location='mailto:info@keheilan.com'">
-        Send Message
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </button>
+
+      <!-- Founder fields -->
+      <div class="role-fields" id="rf-founder">
+        <form id="abt-fnd" novalidate onsubmit="submitAbtFnd(event)">
+          <div class="fg">
+            <label>Company Name</label>
+            <input type="text" id="af-company" placeholder="Your company name">
+            <div class="ferr" id="af-company-err">Please enter your company name.</div>
+          </div>
+          <div class="fg">
+            <label>Pitch Deck</label>
+            <div class="fu-area" id="abt-fu">
+              <input type="file" accept=".pdf,.ppt,.pptx" onchange="handleFuFile(this.files[0],'abt')">
+              <div class="fu-text"><strong>Click to upload</strong> or drag &amp; drop</div>
+              <div class="fu-meta">PDF, PPT, PPTX · max 10 MB</div>
+              <div class="fu-name" id="abt-fu-name"></div>
+            </div>
+            <div class="ferr" id="af-file-err">Please upload your pitch deck (PDF, PPT, or PPTX, max 10 MB).</div>
+          </div>
+          <div class="fg">
+            <label>Message <span class="lbl-opt">(optional)</span></label>
+            <textarea id="af-msg" placeholder="Briefly describe your company and what stage you're at."></textarea>
+          </div>
+          <button type="submit" class="form-submit" id="af-btn">
+            <span id="af-btntxt">Get Started</span>
+            <div class="fspin" id="af-spin"></div>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" id="af-arrow"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success-state" id="abt-success">
+        <div class="fss-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div class="fss-title" id="abt-success-title">Thank you.</div>
+        <p class="fss-body">We've received your request and will be in touch within one business day.</p>
+      </div>
     </div>
+
   </div>
 </section>
 
 <div class="cta-banner">
-  <h2 class="rv">A trusted firm built to grow your wealth.</h2>
-  <p class="rv d1">Ethical. Innovative. Global. Everything you need from a modern asset manager.</p>
-  <a href="mailto:info@keheilan.com" class="rv d2">
-    Get in Touch
+  <h2 class="rv">Disciplined capital. Ethically managed.</h2>
+  <p class="rv d1">Shariah-compliant strategies for investors who refuse to compromise on either performance or principle.</p>
+  <a href="#contact" class="rv d2">
+    Request a Consultation
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
 </div>
@@ -460,6 +595,66 @@ const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 window.addEventListener('scroll',()=>{document.querySelector('nav').style.background=scrollY>20?'rgba(255,255,255,1)':'rgba(255,255,255,0.98)';},{passive:true});
 const hbg=document.getElementById('hamburger');const mobNav=document.getElementById('mobNav');hbg.addEventListener('click',()=>{hbg.classList.toggle('open');mobNav.classList.toggle('open');});const dd=document.querySelector('.nav-dropdown');if(dd){dd.querySelector('.nav-dropdown-btn').addEventListener('click',e=>{e.stopPropagation();dd.classList.toggle('open');});document.addEventListener('click',()=>dd.classList.remove('open'));}const ms=document.querySelector('.mob-strategy');if(ms){ms.querySelector('.mob-strategy-btn').addEventListener('click',()=>ms.classList.toggle('open'));}mobNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');mobNav.classList.remove('open');}));
+
+// ── About page form logic
+let abtFile=null;
+function switchRole(role,btn){document.querySelectorAll('.role-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.role-fields').forEach(f=>f.classList.remove('active'));document.getElementById('rf-'+role).classList.add('active');}
+function cbToggle(inp){inp.closest('.cb-row').classList.toggle('checked',inp.checked);}
+function handleFuFile(file,prefix){
+  if(!file)return;
+  const ext=file.name.split('.').pop().toLowerCase();
+  if(!['pdf','ppt','pptx'].includes(ext)){showFerr('af-file-err','Please upload a PDF, PPT, or PPTX file.');clearFu(prefix);return;}
+  if(file.size>10*1024*1024){showFerr('af-file-err','File must be under 10 MB.');clearFu(prefix);return;}
+  abtFile=file;document.getElementById(prefix+'-fu-name').textContent=file.name;document.getElementById(prefix+'-fu').classList.add('has-file');hideFerr('af-file-err');
+}
+function clearFu(prefix){abtFile=null;document.getElementById(prefix+'-fu-name').textContent='';document.getElementById(prefix+'-fu').classList.remove('has-file');}
+function showFerr(id,msg){const el=document.getElementById(id);if(msg)el.textContent=msg;el.style.display='block';}
+function hideFerr(id){document.getElementById(id).style.display='none';}
+function isEmail(v){return/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);}
+function setAbtLoading(prefix,on){document.getElementById(prefix+'-btn').disabled=on;document.getElementById(prefix+'-btntxt').textContent=on?'Sending…':'Request a Consultation';document.getElementById(prefix+'-spin').style.display=on?'block':'none';document.getElementById(prefix+'-arrow').style.display=on?'none':'block';}
+function showAbtSuccess(name){document.getElementById('abt-success-title').textContent='Thank you, '+name.split(' ')[0]+'.';document.querySelectorAll('#rf-investor,#rf-founder').forEach(el=>el.style.display='none');document.querySelector('.role-toggle').style.display='none';document.getElementById('abt-success').style.display='block';}
+async function submitAbtInv(e){
+  e.preventDefault();
+  const name=document.getElementById('shared-name').value.trim();
+  const email=document.getElementById('shared-email').value.trim();
+  const interests=Array.from(document.querySelectorAll('#abt-inv input[type="checkbox"]:checked')).map(c=>c.value);
+  let ok=true;
+  name?hideFerr('shared-name-err'):(showFerr('shared-name-err'),ok=false);
+  isEmail(email)?hideFerr('shared-email-err'):(showFerr('shared-email-err'),ok=false);
+  interests.length?hideFerr('ai-int-err'):(showFerr('ai-int-err'),ok=false);
+  if(!ok)return;
+  setAbtLoading('ai',true);
+  const fd=new FormData();
+  fd.append('name',name);fd.append('email',email);fd.append('interests',interests.join(', '));
+  const msg=document.getElementById('ai-msg').value.trim();if(msg)fd.append('message',msg);
+  fd.append('_subject','Investor Inquiry — Keheilan');fd.append('_captcha','false');fd.append('_template','table');
+  try{const r=await fetch('https://formsubmit.co/ajax/invest@keheilan.com',{method:'POST',headers:{Accept:'application/json'},body:fd});if(r.ok)showAbtSuccess(name);else throw 0;}
+  catch{alert('Something went wrong. Please email invest@keheilan.com directly.');}
+  finally{setAbtLoading('ai',false);}
+}
+async function submitAbtFnd(e){
+  e.preventDefault();
+  const name=document.getElementById('shared-name').value.trim();
+  const email=document.getElementById('shared-email').value.trim();
+  const company=document.getElementById('af-company').value.trim();
+  let ok=true;
+  name?hideFerr('shared-name-err'):(showFerr('shared-name-err'),ok=false);
+  isEmail(email)?hideFerr('shared-email-err'):(showFerr('shared-email-err'),ok=false);
+  company?hideFerr('af-company-err'):(showFerr('af-company-err'),ok=false);
+  abtFile?hideFerr('af-file-err'):(showFerr('af-file-err'),ok=false);
+  if(!ok)return;
+  setAbtLoading('af',true);
+  const fd=new FormData();
+  fd.append('name',name);fd.append('email',email);fd.append('company',company);fd.append('attachment',abtFile,abtFile.name);
+  const msg=document.getElementById('af-msg').value.trim();if(msg)fd.append('message',msg);
+  fd.append('_subject','Founder Inquiry — Keheilan');fd.append('_captcha','false');fd.append('_template','table');
+  try{const r=await fetch('https://formsubmit.co/ajax/invest@keheilan.com',{method:'POST',headers:{Accept:'application/json'},body:fd});if(r.ok)showAbtSuccess(name);else throw 0;}
+  catch{alert('Something went wrong. Please email invest@keheilan.com directly.');}
+  finally{setAbtLoading('af',false);}
+}
+// Drag-drop for about page file upload
+const abtFu=document.getElementById('abt-fu');
+if(abtFu){abtFu.addEventListener('dragover',e=>{e.preventDefault();abtFu.classList.add('drag-over');});abtFu.addEventListener('dragleave',()=>abtFu.classList.remove('drag-over'));abtFu.addEventListener('drop',e=>{e.preventDefault();abtFu.classList.remove('drag-over');const f=e.dataTransfer.files[0];if(f){abtFu.querySelector('input').value='';handleFuFile(f,'abt');abtFile=f;}});}
 </script>
 </body>
 </html>
